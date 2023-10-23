@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-body bg-quinary text-primary text-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-secondary text-heading;
+}
+
+#app {
+
+    .page {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .section {
+            @apply m-8 p-2 bg-quaternary;
+
+            .title {
+                @apply mb-4;
+            }
+
+            .introduction {
+                @apply mb-8;
+            }
+
+            .sub-section {
+                @apply m-4 p-4;
+
+                code {
+                    @apply bg-quinary text-tertiary;
+                }
+            }
+        }
+
+    }
+
+    .nav {
+        @apply flex justify-between items-center p-4;
+        @apply bg-quaternary text-secondary;
+
+        .home {
+            @apply flex items-center flex-shrink-0 text-white mr-6;
+            .link {
+                @apply font-semibold text-xl tracking-tight;
+            }
+        }
+        .hamburger-container {
+            @apply block lg:hidden;
+        }
+        .nav-item-container {
+            @apply w-full block flex-grow lg:flex lg:items-center lg:w-auto;
+            .nav-item {
+                @apply text-sm lg:flex-grow;
+            }
+        }
+    }
+
+    .footer {
+        @apply flex justify-center items-center p-4;
+        @apply text-secondary;
+    }
+
+    .button {
+        @apply flex items-center px-3 py-2 border rounded text-secondary border-secondary hover:text-white hover:border-white;
+    }
+
+    .link {
+        @apply block mt-4 lg:inline-block lg:mt-0 text-secondary hover:text-white mr-4;
+    }
+}
