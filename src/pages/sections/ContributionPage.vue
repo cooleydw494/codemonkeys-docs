@@ -35,7 +35,4 @@
 </script>
 
 <style scoped>
-    section {
-        padding: 1em;
-    }
 </style>

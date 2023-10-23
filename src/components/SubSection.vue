@@ -16,12 +16,4 @@ export default {
 </script>
 
 <style scoped>
-.sub-section {
-  padding: 1em;
-  border-bottom: 1px solid var(--color-secondary);
-}
-
-.sub-section:last-child {
-  border-bottom: none;
-}
 </style>

@@ -36,8 +36,4 @@ export default {
 </script>
 
 <style scoped>
-section {
-  margin: 1em;
-  padding: 1em;
-}
 </style>

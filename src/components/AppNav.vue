@@ -1,7 +1,7 @@
 <template>
   <nav class="nav">
     <div class="home">
-      <router-link class="link" :to="{name: 'HomePage'}">CodeMonkeys Docs</router-link>
+      <router-link class="link" :to="{name: 'HomePage'}">CodeMonkeys</router-link>
     </div>
     <div class="hamburger-container">
       <button class="button">
@@ -24,18 +24,17 @@ export default {
   data() {
     return {
       navItems: [
-        {name: 'HomePage', label: 'Home'},
-        {name: 'GettingStarted', label: 'Getting Started'},
-        {name: 'CodemonkeysExplained', label: 'CodeMonkeys Explained'},
-        {name: 'Configuration', label: 'Configuration'},
+        {name: 'CodemonkeysExplained', label: 'What?'},
+        {name: 'GettingStarted', label: 'Get Started'},
+        {name: 'Configuration', label: 'Config'},
         {name: 'MonkCLI', label: 'Monk CLI'},
         {name: 'Commands', label: 'Commands'},
         {name: 'Automations', label: 'Automations'},
-        {name: 'FunctionCalling', label: 'Function Calling'},
+        {name: 'FunctionCalling', label: 'Funcs'},
         {name: 'Barrels', label: 'Barrels'},
-        {name: 'AdvancedTheme', label: 'Advanced Theming'},
-        {name: 'AdvancedMonkeys', label: 'Advanced Monkeys'},
-        {name: 'Contribution', label: 'Contribution'},
+        {name: 'AdvancedTheme', label: 'Theme'},
+        {name: 'AdvancedMonkeys', label: 'Monkeys'},
+        {name: 'Contribution', label: 'Contribute'},
         {name: 'FAQ', label: 'FAQ'},
       ]
     }

@@ -30,16 +30,4 @@ export default {
 </script>
 
 <style scoped>
-section {
-  padding: 1rem;
-}
-h1, h2 {
-  color: var(--color-primary);
-  font-family: var(--font-family-heading);
-}
-p {
-  @apply text-secondary;
-  font-family: var(--font-family-body);
-  margin-top: 1rem;
-}
 </style>

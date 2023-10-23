@@ -1,9 +1,9 @@
 <template>
   <div>
     <app-nav></app-nav>
-    <page>
+    <div class="page">
       <router-view></router-view>
-    </page>
+    </div>
     <app-footer></app-footer>
   </div>
 </template>

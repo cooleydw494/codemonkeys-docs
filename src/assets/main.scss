@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./tailwind.css";
 
 body {
     @apply font-body bg-quinary text-primary text-body;
@@ -17,9 +15,12 @@ h1, h2, h3, h4, h5, h6 {
     .page {
         max-width: 1200px;
         margin: 0 auto;
+        @apply px-4 py-8;
+        height: 100vh;
+        @apply flex flex-col justify-between;
 
         .section {
-            @apply m-8 p-2 bg-quaternary;
+            @apply m-8 p-2;
 
             .title {
                 @apply mb-4;
@@ -62,12 +63,29 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .footer {
+        @apply fixed bottom-0 w-full shadow;
         @apply flex justify-center items-center p-4;
         @apply text-secondary;
+        .container {
+            @apply flex justify-between items-center mx-auto px-4;
+            .copyright {
+                @apply text-center md:text-left text-sm;
+                p { @apply mb-2; }
+            }
+            .socials {
+                @apply md:flex items-center md:space-x-2;
+                .social {
+                    @apply text-gray-400 hover:text-white transition-colors duration-300;
+                }
+            }
+        }
     }
 
     .button {
-        @apply flex items-center px-3 py-2 border rounded text-secondary border-secondary hover:text-white hover:border-white;
+        @apply flex items-center px-3 py-2;
+        @apply border rounded;
+        @apply text-lg text-secondary border-secondary;
+        @apply hover:bg-quaternary hover:text-tertiary hover:border-tertiary;
     }
 
     .link {

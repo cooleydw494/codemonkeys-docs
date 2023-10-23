@@ -24,12 +24,4 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  font-family: var(--font-family-heading);
-  color: var(--color-primary);
-}
-p {
-  font-family: var(--font-family-body);
-  @apply text-secondary;
-}
 </style>

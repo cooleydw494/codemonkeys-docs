@@ -34,3 +34,6 @@ export default {
   components: { SubSection, DocSection }
 }
 </script>
+
+<style scoped>
+</style>

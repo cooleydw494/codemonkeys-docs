@@ -1,11 +1,9 @@
 <template>
   <doc-section>
-    <sub-section>
-      <template #title>Overview</template>
-      <template #content>
-        <p>Our command structure is integral to the functionality and usability of CodeMonkeys. This section provides an overview of commands, how they are structured, and how you can use them in your own projects.</p>
-      </template>
-    </sub-section>
+    <template #title>Overview</template>
+    <template #introduction>
+      <p>Our command structure is integral to the functionality and usability of CodeMonkeys. This section provides an overview of commands, how they are structured, and how you can use them in your own projects.</p>
+    </template>
 
     <sub-section>
       <template #title>Command Structure</template>
@@ -44,23 +42,4 @@ export default {
 </script>
 
 <style scoped>
-.section {
-  padding: 2em;
-}
-.p {
-  margin: 0.5em 0;
-}
-.ul {
-  padding-left: 1.5em;
-}
-.li {
-  margin: 0.3em 0;
-}
-.pre .code {
-  background-color: var(--color-primary);
-  color: white;
-  padding: 1em;
-  border-radius: 5px;
-  font-family: var(--font-family-body);
-}
 </style>
