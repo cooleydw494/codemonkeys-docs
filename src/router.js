@@ -3,7 +3,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 const routes = [
   { path: '/', name: 'HomePage', component: () => import('@/pages/HomePage.vue') },
   { path: '/getting-started', name: 'GettingStarted', component: () => import('@/pages/sections/GettingStarted.vue') },
-  { path: '/codemonkeys-explained', name: 'CodemonkeysExplained', component: () => import('@/pages/sections/CodemonkeysExplained.vue') },
+  { path: '/codemonkeys-explained', name: 'WhatIs', component: () => import('@/pages/sections/WhatIs.vue') },
   { path: '/configuration', name: 'Configuration', component: () => import('@/pages/sections/ConfigPage.vue') },
   { path: '/monk-cli', name: 'MonkCLI', component: () => import('@/pages/sections/MonkCli.vue') },
   { path: '/commands', name: 'Commands', component: () => import('@/pages/sections/CommandsPage.vue') },

@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="page-container">
     <app-nav></app-nav>
     <div class="page">
       <router-view></router-view>
+      <app-footer></app-footer>
     </div>
-    <app-footer></app-footer>
   </div>
 </template>
 
@@ -19,5 +19,17 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+
+.page-container {
+  @apply flex w-full;
+
+  .page {
+    @apply relative flex w-full px-2 py-4;
+    @apply lg:px-4 lg:py-8;
+    height: 100vh;
+  }
+
+}
+
 </style>

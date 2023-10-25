@@ -36,7 +36,7 @@ import DocSection from '../../components/DocSection.vue';
 import SubSection from "@/components/SubSection.vue";
 
 export default {
-  name: 'CodemonkeysExplained',
+  name: 'WhatIs',
   components: { DocSection, SubSection }
 };
 </script>

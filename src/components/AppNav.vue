@@ -1,21 +1,33 @@
 <template>
-  <nav class="nav">
-    <div class="home">
-      <router-link class="link" :to="{name: 'HomePage'}">CodeMonkeys</router-link>
-    </div>
-    <div class="hamburger-container">
-      <button class="button">
+  <div class="nav-container">
+    <div class="top">
+      <button class="button hamburger" @click="toggleMenu" v-if="isMobile">
         |||
       </button>
     </div>
-    <div class="nav-item-container" v-for="navItem in navItems" :key="navItem.name">
-      <div class="nav-item">
-        <router-link :to="{name: navItem.name}" class="link">
-          {{navItem.label}}
-        </router-link>
+    <nav class="nav">
+      <!-- Mobile View -->
+      <div class="mobile-nav" v-if="showMenu && isMobile">
+        <div class="nav-item" v-for="navItem in navItems" :key="navItem.name">
+          <router-link :to="{name: navItem.name}" class="link" @click="toggleMenu">
+            {{navItem.label}}
+          </router-link>
+        </div>
       </div>
-    </div>
-  </nav>
+
+      <!-- Desktop View -->
+      <div class="desktop-nav" v-else>
+        <div class="home nav-item">
+          <router-link class="link" :to="{name: 'HomePage'}">CodeMonkeys</router-link>
+        </div>
+        <div class="nav-item" v-for="navItem in navItems" :key="navItem.name">
+          <router-link :to="{name: navItem.name}" class="link">
+            {{navItem.label}}
+          </router-link>
+        </div>
+      </div>
+    </nav>
+  </div>
 </template>
 
 <script>
@@ -23,8 +35,10 @@ export default {
   name: 'AppNav',
   data() {
     return {
+      isMobile: window.innerWidth <= 768,
+      showMenu: false,
       navItems: [
-        {name: 'CodemonkeysExplained', label: 'What?'},
+        {name: 'WhatIs', label: 'What?'},
         {name: 'GettingStarted', label: 'Get Started'},
         {name: 'Configuration', label: 'Config'},
         {name: 'MonkCLI', label: 'Monk CLI'},
@@ -38,9 +52,59 @@ export default {
         {name: 'FAQ', label: 'FAQ'},
       ]
     }
-  }
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.isMobile = window.innerWidth <= 768;
+    });
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
+  },
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.nav-container {
+
+  .top {
+    @apply backdrop-brightness-125;
+
+    .hamburger {
+      @apply top-2 left-2 z-50;
+    }
+  }
+
+  .nav {
+    @apply z-50 backdrop-brightness-125 inline-block h-auto md:relative;
+
+    .mobile-nav {
+      @apply md:hidden flex flex-col;
+      width: 100vw;
+    }
+
+    .desktop-nav {
+      @apply hidden md:block;
+      @apply w-52;
+      height: 100vh;
+    }
+
+    .nav-item {
+      @apply pl-8 pb-3 pt-6 border-b-gray-700 border-solid border-b-2;
+    }
+
+    .home {
+      @apply flex items-center flex-shrink-0 text-white;
+      .link {
+        @apply font-semibold text-xl tracking-tight;
+      }
+    }
+  }
+}
+
+
+
 </style>

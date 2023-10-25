@@ -1,3 +1,4 @@
+@import 'modern-normalize/modern-normalize.css';
 @import "./tailwind.css";
 
 body {
@@ -6,81 +7,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+body * {
+    @apply box-border;
+}
+
 h1, h2, h3, h4, h5, h6 {
     @apply font-heading text-secondary text-heading;
 }
 
 #app {
-
-    .page {
-        max-width: 1200px;
-        margin: 0 auto;
-        @apply px-4 py-8;
-        height: 100vh;
-        @apply flex flex-col justify-between;
-
-        .section {
-            @apply m-8 p-2;
-
-            .title {
-                @apply mb-4;
-            }
-
-            .introduction {
-                @apply mb-8;
-            }
-
-            .sub-section {
-                @apply m-4 p-4;
-
-                code {
-                    @apply bg-quinary text-tertiary;
-                }
-            }
-        }
-
-    }
-
-    .nav {
-        @apply flex justify-between items-center p-4;
-        @apply bg-quaternary text-secondary;
-
-        .home {
-            @apply flex items-center flex-shrink-0 text-white mr-6;
-            .link {
-                @apply font-semibold text-xl tracking-tight;
-            }
-        }
-        .hamburger-container {
-            @apply block lg:hidden;
-        }
-        .nav-item-container {
-            @apply w-full block flex-grow lg:flex lg:items-center lg:w-auto;
-            .nav-item {
-                @apply text-sm lg:flex-grow;
-            }
-        }
-    }
-
-    .footer {
-        @apply fixed bottom-0 w-full shadow;
-        @apply flex justify-center items-center p-4;
-        @apply text-secondary;
-        .container {
-            @apply flex justify-between items-center mx-auto px-4;
-            .copyright {
-                @apply text-center md:text-left text-sm;
-                p { @apply mb-2; }
-            }
-            .socials {
-                @apply md:flex items-center md:space-x-2;
-                .social {
-                    @apply text-gray-400 hover:text-white transition-colors duration-300;
-                }
-            }
-        }
-    }
-
     .button {
         @apply flex items-center px-3 py-2;
         @apply border rounded;

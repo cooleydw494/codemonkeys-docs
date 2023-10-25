@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#f3e9ff',
-        'secondary': '#a9ffe7',
-        'tertiary': '#a7ff54',
+        'primary': '#f1eafc',
+        'secondary': '#bafce9',
+        'tertiary': '#c4fc8f',
         'quaternary': '#4b3e3e',
-        'quinary': '#292236',
+        'quinary': '#1f1928',
       },
       fontFamily: {
         'heading': ['Roboto', 'sans-serif'],

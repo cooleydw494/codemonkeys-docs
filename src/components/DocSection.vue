@@ -12,5 +12,26 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.section {
+  @apply m-8 p-2;
+
+  .title {
+      @apply mb-4;
+  }
+
+  .introduction {
+      @apply mb-8;
+  }
+
+  .sub-section {
+      @apply m-4 p-4;
+
+      code {
+          @apply bg-quinary text-tertiary;
+      }
+  }
+}
+
 </style>
