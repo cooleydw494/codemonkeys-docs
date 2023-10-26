@@ -15,10 +15,10 @@ export default {
 <style lang="scss" scoped>
 
 .section {
-  @apply m-8 p-2;
+  @apply mb-8 p-8;
 
   .title {
-      @apply mb-4;
+      @apply text-2xl mb-4;
   }
 
   .introduction {
@@ -26,7 +26,7 @@ export default {
   }
 
   .sub-section {
-      @apply m-4 p-4;
+      @apply mb-4 p-4;
 
       code {
           @apply bg-quinary text-tertiary;

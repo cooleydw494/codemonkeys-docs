@@ -1,32 +1,32 @@
 <template>
   <div class="nav-container">
-    <div class="top">
-      <button class="button hamburger" @click="toggleMenu" v-if="isMobile">
-        |||
-      </button>
-    </div>
-    <nav class="nav">
-      <!-- Mobile View -->
-      <div class="mobile-nav" v-if="showMenu && isMobile">
-        <div class="nav-item" v-for="navItem in navItems" :key="navItem.name">
-          <router-link :to="{name: navItem.name}" class="link" @click="toggleMenu">
-            {{navItem.label}}
-          </router-link>
-        </div>
-      </div>
 
-      <!-- Desktop View -->
-      <div class="desktop-nav" v-else>
-        <div class="home nav-item">
-          <router-link class="link" :to="{name: 'HomePage'}">CodeMonkeys</router-link>
-        </div>
-        <div class="nav-item" v-for="navItem in navItems" :key="navItem.name">
-          <router-link :to="{name: navItem.name}" class="link">
-            {{navItem.label}}
-          </router-link>
-        </div>
+    <button class="button hamburger" @click="toggleMenu" v-if="isMobile">
+      |||
+    </button>
+
+    <!-- Mobile View -->
+    <nav class="mobile-nav" v-if="showMenu && isMobile">
+      <div class="nav-item" v-for="navItem in navItems" :key="navItem.name">
+        <router-link :to="{name: navItem.name}" class="link" @click="toggleMenu">
+          {{navItem.label}}
+        </router-link>
       </div>
     </nav>
+
+    <!-- Desktop View -->
+    <nav class="desktop-nav" v-else>
+      <router-link class="home nav-item" :to="{name: 'HomePage'}">
+        <span>CodeMonkeys</span>
+      </router-link>
+      <router-link v-for="navItem in navItems"
+                   :key="navItem.name"
+                   :to="{name: navItem.name}"
+                   class="nav-item">
+        <span>{{navItem.label}}</span>
+      </router-link>
+    </nav>
+
   </div>
 </template>
 
@@ -70,39 +70,32 @@ export default {
 
 .nav-container {
 
-  .top {
-    @apply backdrop-brightness-125;
-
-    .hamburger {
-      @apply top-2 left-2 z-50;
-    }
+  .hamburger {
+    @apply top-2 left-2 z-50;
   }
 
-  .nav {
+  nav {
     @apply z-50 backdrop-brightness-125 inline-block h-auto md:relative;
-
-    .mobile-nav {
-      @apply md:hidden flex flex-col;
-      width: 100vw;
-    }
-
-    .desktop-nav {
-      @apply hidden md:block;
-      @apply w-52;
-      height: 100vh;
-    }
-
-    .nav-item {
-      @apply pl-8 pb-3 pt-6 border-b-gray-700 border-solid border-b-2;
-    }
-
-    .home {
-      @apply flex items-center flex-shrink-0 text-white;
-      .link {
-        @apply font-semibold text-xl tracking-tight;
-      }
-    }
   }
+
+  .mobile-nav {
+    @apply md:hidden flex flex-col;
+    width: 100vw;
+  }
+
+  .desktop-nav {
+    @apply hidden md:block;
+    @apply w-64;
+    height: 100vh;
+  }
+
+  .nav-item {
+    @apply block pl-10 pb-3 pt-6;
+    @apply border-b-gray-700 border-solid border-b-2;
+    @apply font-semibold tracking-tight;
+    @apply text-secondary hover:text-white;
+  }
+
 }
 
 

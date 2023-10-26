@@ -25,8 +25,9 @@ export default {
   @apply flex w-full;
 
   .page {
-    @apply relative flex w-full px-2 py-4;
-    @apply lg:px-4 lg:py-8;
+    @apply relative flex px-2 py-4;
+    @apply flex-grow;
+    @apply lg:px-8 lg:py-8;
     height: 100vh;
   }
 

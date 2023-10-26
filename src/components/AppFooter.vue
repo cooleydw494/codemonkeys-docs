@@ -30,11 +30,10 @@ export default {
 
 .footer {
   @apply absolute bottom-0 flex justify-between items-center w-full;
-  @apply text-secondary;
+  @apply p-4 text-secondary;
 
   .copyright {
     @apply text-left text-sm;
-    p { @apply mb-2; }
   }
 
   .socials {
