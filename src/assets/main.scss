@@ -12,7 +12,7 @@ body * {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply font-heading text-primary-600 text-heading;
+    @apply font-heading text-primary-400 text-heading;
 }
 
 #app {
@@ -28,9 +28,31 @@ h1, h2, h3, h4, h5, h6 {
         @apply hover:bg-quaternary hover:text-primary-400 transition-colors duration-200;
     }
 
-    .link {
+    .link, .md-content a {
         @apply inline-block;
-        @apply text-primary-400;
+        @apply text-tertiary;
         @apply hover:text-primary-200 transition-colors duration-200;
+    }
+
+    .md-content {
+        h1, h2, h3, h4, h5, h6 {
+            @apply mt-4 text-primary-500;
+        }
+
+        pre {
+            @apply mt-4 mb-6;
+            code {
+
+                @apply p-2 bg-surface-300 text-surface-700 rounded-md text-sm;
+            }
+            code::after {
+                //content: "";
+            }
+        }
+
+        code {
+
+                @apply px-1 bg-surface-300 text-surface-700 rounded-sm text-sm;
+            }
     }
 }

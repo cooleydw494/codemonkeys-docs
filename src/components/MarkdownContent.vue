@@ -1,5 +1,5 @@
 <template>
-  <div v-html="parsedMarkdown"></div>
+  <div class="md-content" v-html="parsedMarkdown"></div>
 </template>
 
 <script>

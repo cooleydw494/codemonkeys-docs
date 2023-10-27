@@ -7,7 +7,7 @@ module.exports = {
 
         'primary': '#f3eefc',
         'secondary': '#c9faeb',
-        'tertiary': '#a5ff58',
+        'tertiary': '#70a6d2',
         'quaternary': '#131111',
         'quinary': '#221c2a',
 
@@ -24,6 +24,8 @@ module.exports = {
         'surface-400': '#645f6a',
         'surface-500': '#7c7781',
         'surface-600': '#959199',
+        'surface-700': '#aeabb1',
+        'surface-800': '#c8c6c8',
 
       },
       fontFamily: {

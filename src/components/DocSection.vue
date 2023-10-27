@@ -16,6 +16,7 @@ export default {
 
 .section {
   @apply w-full max-w-5xl mb-8 p-8 bg-surface-200 rounded-lg;
+  @apply text-surface-700 drop-shadow-xl;
   margin: 0 auto;
 
   .title {
@@ -23,7 +24,7 @@ export default {
   }
 
   .introduction {
-      @apply mb-8;
+      @apply mb-8 text-surface-800;
   }
 }
 

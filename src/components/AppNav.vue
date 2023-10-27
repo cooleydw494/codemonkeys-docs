@@ -81,12 +81,12 @@ export default {
   }
 
   nav {
-    @apply bg-surface-300 bg-opacity-80;
+    @apply bg-surface-300 bg-opacity-80 drop-shadow-xl;
     @apply z-50 md:relative;
 
     &.mobile-nav {
       @apply w-52 absolute top-0 z-40 mt-8 overflow-y-scroll;
-      @apply md:hidden flex flex-col rounded-2xl;
+      @apply md:hidden flex flex-col rounded-xl;
 
       .nav-item {
         @apply rounded-bl-xl text-center pr-0;
@@ -95,7 +95,7 @@ export default {
 
     &.desktop-nav {
       @apply hidden md:inline-block rounded-r-lg;
-      @apply w-48;
+      @apply w-44;
     }
   }
 
@@ -118,9 +118,9 @@ export default {
       @apply border-t-2;
     }
 
-    //&:last-child {
-    //  @apply border-b-0;
-    //}
+    &:last-child {
+      @apply rounded-br-md;
+    }
   }
 
 }
