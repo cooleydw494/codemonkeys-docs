@@ -2,7 +2,7 @@
 @import "./tailwind.css";
 
 body {
-    @apply font-body bg-quinary text-primary text-body;
+    @apply font-body bg-surface-100 text-white text-body;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -12,18 +12,25 @@ body * {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    @apply font-heading text-secondary text-heading;
+    @apply font-heading text-primary-600 text-heading;
 }
 
 #app {
     .button {
-        @apply flex items-center px-3 py-2;
-        @apply border rounded;
-        @apply text-lg text-secondary border-secondary;
-        @apply hover:bg-quaternary hover:text-tertiary hover:border-tertiary;
+        @apply w-32 py-2;
+        @apply md:w-40 md:py-4;
+
+        @apply flex items-center justify-center;
+        @apply rounded border-2 border-secondary;
+
+        @apply text-lg font-bold text-center tracking-wide;
+        @apply bg-quinary text-tertiary;
+        @apply hover:bg-quaternary hover:text-primary-400 transition-colors duration-200;
     }
 
     .link {
-        @apply block mt-4 lg:inline-block lg:mt-0 text-secondary hover:text-white mr-4;
+        @apply inline-block;
+        @apply text-primary-400;
+        @apply hover:text-primary-200 transition-colors duration-200;
     }
 }

@@ -15,7 +15,8 @@ export default {
 <style lang="scss" scoped>
 
 .section {
-  @apply mb-8 p-8;
+  @apply w-full max-w-5xl mb-8 p-8 bg-surface-200 rounded-lg;
+  margin: 0 auto;
 
   .title {
       @apply text-2xl mb-4;
@@ -23,14 +24,6 @@ export default {
 
   .introduction {
       @apply mb-8;
-  }
-
-  .sub-section {
-      @apply mb-4 p-4;
-
-      code {
-          @apply bg-quinary text-tertiary;
-      }
   }
 }
 

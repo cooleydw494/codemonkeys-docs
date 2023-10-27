@@ -4,11 +4,27 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+
         'primary': '#f3eefc',
         'secondary': '#c9faeb',
-        'tertiary': '#c4fc8f',
-        'quaternary': '#4b3e3e',
-        'quinary': '#1f1928',
+        'tertiary': '#a5ff58',
+        'quaternary': '#131111',
+        'quinary': '#221c2a',
+
+        'primary-100': '#37ff05',
+        'primary-200': '#62ff40',
+        'primary-300': '#7fff5f',
+        'primary-400': '#97ff79',
+        'primary-500': '#abff91',
+        'primary-600': '#beffa7',
+
+        'surface-100': '#221c2a',
+        'surface-200': '#37313e',
+        'surface-300': '#4d4754',
+        'surface-400': '#645f6a',
+        'surface-500': '#7c7781',
+        'surface-600': '#959199',
+
       },
       fontFamily: {
         'heading': ['Roboto', 'sans-serif'],

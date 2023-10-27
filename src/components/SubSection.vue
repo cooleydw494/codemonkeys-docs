@@ -15,5 +15,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+.sub-section {
+  @apply mb-4;
+
+  code {
+    @apply bg-surface-100 text-tertiary;
+  }
+}
+
 </style>

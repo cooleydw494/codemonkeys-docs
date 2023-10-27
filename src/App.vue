@@ -1,10 +1,10 @@
 <template>
   <div class="page-container">
     <app-nav></app-nav>
-    <div class="page">
+    <app-page>
       <router-view></router-view>
-      <app-footer></app-footer>
-    </div>
+    </app-page>
+    <app-footer></app-footer>
   </div>
 </template>
 
@@ -12,10 +12,11 @@
 
 import AppNav from "@/components/AppNav.vue";
 import AppFooter from "@/components/AppFooter.vue";
+import AppPage from "@/components/AppPage.vue";
 
 export default {
   name: 'App',
-  components: {AppFooter, AppNav},
+  components: {AppPage, AppFooter, AppNav},
 }
 </script>
 
@@ -23,14 +24,6 @@ export default {
 
 .page-container {
   @apply flex w-full;
-
-  .page {
-    @apply relative flex px-2 py-4;
-    @apply flex-grow;
-    @apply lg:px-8 lg:py-8;
-    height: 100vh;
-  }
-
 }
 
 </style>
