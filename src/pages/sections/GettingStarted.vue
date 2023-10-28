@@ -1,7 +1,8 @@
 <template>
   <doc-section>
-    <template #title>Getting Started 🚀</template>
     <markdown-content markdown="
+# Getting Started 🚀
+
 First, install the framework with pip:
 ```
 pip install codemonkeys
@@ -17,6 +18,7 @@ This will scaffold a new project with the given name. _Note: CodeMonkeys treats 
 
 ## Project Structure 📁
 CodeMonkeys' project structure aims to allow you to build/configure/run your automations in a simple, powerful way. You're encouraged to get creative with your Automation/Command/Barrel `run()` methods, custom config properties, and utilize any additional modules/classes/dirs you create. However, the base project scaffolding is assumed by the Monk CLI and built-in config management. Don't fight these paradigms unless you're prepared to replace them.
+
 
 * `/commands`: Command instances, runnable via `monk <command>`. Also handles bash/bat scripts.
 * `/automations`: Automation instances, runnable via `monk -a <automation>`.

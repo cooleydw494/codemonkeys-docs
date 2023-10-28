@@ -5,12 +5,6 @@ module.exports = {
     extend: {
       colors: {
 
-        'primary': '#f3eefc',
-        'secondary': '#c9faeb',
-        'tertiary': '#70a6d2',
-        'quaternary': '#131111',
-        'quinary': '#221c2a',
-
         'primary-100': '#37ff05',
         'primary-200': '#62ff40',
         'primary-300': '#7fff5f',
@@ -28,14 +22,6 @@ module.exports = {
         'surface-800': '#c8c6c8',
 
       },
-      fontFamily: {
-        'heading': ['Roboto', 'sans-serif'],
-        'body': ['Roboto Slab', 'sans-serif'],
-      },
-      fontSize: {
-        'heading': ['2rem', { lineHeight: '2.5rem' }],
-        'body': ['1rem', { lineHeight: '1.5rem' }],
-      }
     },
   },
   plugins: [],

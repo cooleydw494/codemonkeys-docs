@@ -1,58 +1,79 @@
 @import 'modern-normalize/modern-normalize.css';
+@import 'https://use.typekit.net/zhq1xpb.css';
 @import "./tailwind.css";
 
 body {
-    @apply font-body bg-surface-100 text-white text-body;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+  font-family: 'darkmode-mono-on', 'sans-serif';
 
-body * {
-    @apply box-border;
-}
+  @apply bg-surface-100 text-white font-medium text-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-spacing: -0.25rem;
 
-h1, h2, h3, h4, h5, h6 {
-    @apply font-heading text-primary-400 text-heading;
-}
+  #app {
 
-#app {
+    h1, h2, h3, h4, h5, h6 {
+      @apply mt-8 mb-4;
+      @apply font-bold text-primary-600;
+    }
+
+    h1 {
+      @apply text-primary-500 text-2xl;
+    }
+    h2 { @apply text-xl; }
+    h3 { @apply text-lg; }
+    h4 { @apply text-base; }
+    h5 { @apply text-sm; }
+    h6 { @apply text-xs; }
+
+
     .button {
-        @apply w-32 py-2;
-        @apply md:w-40 md:py-4;
+      @apply w-32 py-2;
+      @apply md:w-40 md:py-4;
 
-        @apply flex items-center justify-center;
-        @apply rounded border-2 border-secondary;
+      @apply flex items-center justify-center;
+      @apply rounded border-2 border-primary-300;
 
-        @apply text-lg font-bold text-center tracking-wide;
-        @apply bg-quinary text-tertiary;
-        @apply hover:bg-quaternary hover:text-primary-400 transition-colors duration-200;
+      @apply text-lg font-bold text-center tracking-wide;
+      @apply bg-surface-300 text-primary-600;
+      @apply hover:bg-surface-200 hover:text-primary-400 transition-colors duration-200;
     }
 
     .link, .md-content a {
-        @apply inline-block;
-        @apply text-tertiary;
-        @apply hover:text-primary-200 transition-colors duration-200;
+      @apply inline-block;
+      @apply text-primary-400;
+      @apply hover:text-primary-100 transition-colors duration-200;
     }
 
     .md-content {
-        h1, h2, h3, h4, h5, h6 {
-            @apply mt-4 text-primary-500;
-        }
 
-        pre {
-            @apply mt-4 mb-6;
-            code {
+      p {
+        @apply my-4;
+      }
 
-                @apply p-2 bg-surface-300 text-surface-700 rounded-md text-sm;
-            }
-            code::after {
-                //content: "";
-            }
-        }
-
+      pre {
+        @apply mt-4 mb-6;
         code {
+          @apply w-full block p-4 bg-surface-300 text-surface-800 rounded-md;
+        }
 
-                @apply px-1 bg-surface-300 text-surface-700 rounded-sm text-sm;
-            }
+        &::after {
+          @apply absolute top-1 right-1 flex items-center justify-center;
+          content: "📋";
+          width: 24px; // Adjust the size as needed
+          height: 24px;
+          cursor: pointer;
+          @apply text-sm; // Adjust the text size if needed
+        }
+      }
+
+      code {
+        @apply px-1 bg-surface-300 text-surface-800 rounded-sm text-sm;
+      }
     }
+  }
+}
+
+body * {
+  @apply box-border;
 }

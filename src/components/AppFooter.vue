@@ -46,7 +46,7 @@ export default {
     @apply flex items-center space-x-4;
 
     .social {
-      @apply w-5 h-5 text-surface-600 hover:text-primary-600 transition-colors duration-200;
+      @apply w-5 h-5 text-surface-600 hover:text-primary-400 transition-colors duration-200;
     }
   }
 }

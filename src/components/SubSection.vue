@@ -19,10 +19,6 @@ export default {
 
 .sub-section {
   @apply mb-4;
-
-  code {
-    @apply bg-surface-100 text-tertiary;
-  }
 }
 
 </style>

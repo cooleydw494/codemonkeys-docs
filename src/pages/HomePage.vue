@@ -2,11 +2,11 @@
   <section title="CodeMonkeys Landing Page content">
 
     <div class="intro">
-      <p class="mb-1">
-        Welcome to the CodeMonkeys Docs, here to help you dig into the framework with relative ease.
+      <p class="mb-2 text-surface-700">
+        CodeMonkeys Framework Documentation
       </p>
-      <p>
-        Visit the <a class="link" :href="sphinxLink" target="_blank">Sphinx Docs</a> for sourcecode documentation.
+      <p class="text-xs">
+        Visit the <a class="link" :href="sphinxLink" target="_blank">Sphinx Docs</a> for sourcecode documentation
       </p>
     </div>
 
@@ -42,8 +42,8 @@
       overflow-y: hidden;
 
       img {
-        @apply w-full max-w-xl lg:max-w-2xl xl:max-w-3xl;
-        opacity: .65;
+        @apply w-full max-w-xl lg:max-w-2xl xl:max-w-3xl rounded-xl;
+        opacity: .7;
         margin-top: -9%;
       }
     }
