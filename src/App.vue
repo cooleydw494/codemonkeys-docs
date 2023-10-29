@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
     <app-nav></app-nav>
-    <app-page>
+    <app-page :key="$route.name">
       <router-view></router-view>
     </app-page>
     <app-footer></app-footer>

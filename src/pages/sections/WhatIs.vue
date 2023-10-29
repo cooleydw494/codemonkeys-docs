@@ -1,11 +1,10 @@
 <template>
   <doc-section>
-    <template #title>What is CodeMonkeys? 🐒</template>
-    <template #introduction>
-      In this section, we explain the origination of CodeMonkeys, progress so far, and our goals.
-    </template>
-
     <markdown-content markdown="
+# What is CodeMonkeys? 🐒
+
+In this section, we explain the origination of CodeMonkeys, progress so far, and our goals.
+
 ## Overview 🌐
 
 CodeMonkeys gives devs control over their automated GPT logic. The current focus is working on codebases but it is lovingly designed to enable automations of all kinds. This framework aims to use AI effectively, while being reliable, predictable, and tailored to your needs. There is a strong focus on only involving AI at crucial areas of strength, and using good old-fashioned code for everything else.

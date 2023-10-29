@@ -1,30 +1,47 @@
 @import 'modern-normalize/modern-normalize.css';
 @import 'https://use.typekit.net/zhq1xpb.css';
 @import "./tailwind.css";
+@import "./prism.css";
 
 body {
   font-family: 'darkmode-mono-on', 'sans-serif';
 
-  @apply bg-surface-100 text-white font-medium text-base;
+  @apply bg-surface-100 text-white text-sm font-semibold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  word-spacing: -0.25rem;
+  word-spacing: -0.2rem;
+  @apply scroll-smooth;
 
   #app {
 
     h1, h2, h3, h4, h5, h6 {
       @apply mt-8 mb-4;
-      @apply font-bold text-primary-600;
+      @apply font-bold text-primary-500;
     }
 
     h1 {
-      @apply text-primary-500 text-2xl;
+      @apply text-primary-400 text-2xl;
     }
-    h2 { @apply text-xl; }
-    h3 { @apply text-lg; }
-    h4 { @apply text-base; }
-    h5 { @apply text-sm; }
-    h6 { @apply text-xs; }
+
+    h2 {
+      @apply text-xl mt-20;
+    }
+
+    h3 {
+      @apply text-lg;
+    }
+
+    h4 {
+      @apply text-base;
+    }
+
+    h5 {
+      @apply text-sm;
+    }
+
+    h6 {
+      @apply text-xs;
+    }
 
 
     .button {
@@ -41,39 +58,105 @@ body {
 
     .link, .md-content a {
       @apply inline-block;
-      @apply text-primary-400;
+      @apply text-primary-600 font-normal;
       @apply hover:text-primary-100 transition-colors duration-200;
     }
 
     .md-content {
 
-      p {
-        @apply my-4;
+      .table-of-contents {
+        ul {
+          //
+        }
       }
 
-      pre {
-        @apply mt-4 mb-6;
-        code {
-          @apply w-full block p-4 bg-surface-300 text-surface-800 rounded-md;
+      p {
+        @apply my-2;
+
+        em {
+          @apply text-surface-700;
         }
 
-        &::after {
-          @apply absolute top-1 right-1 flex items-center justify-center;
-          content: "📋";
-          width: 24px; // Adjust the size as needed
-          height: 24px;
-          cursor: pointer;
-          @apply text-sm; // Adjust the text size if needed
+        em:first-child {
+          @apply text-xs;
+        }
+      }
+
+
+      pre {
+        @apply mt-4 mb-6 bg-surface-300 rounded-md;
+
+        //code {
+        //  @apply w-full block p-4 bg-surface-300 text-surface-700 rounded-md;
+        //}
+
+      }
+
+      div.code-toolbar > .toolbar {
+        @apply opacity-100 mt-2 mr-4;
+
+        button {
+          @apply py-1.5 px-2 rounded-sm text-xs shadow-none drop-shadow;
         }
       }
 
       code {
-        @apply px-1 bg-surface-300 text-surface-800 rounded-sm text-sm;
+        @apply px-1 bg-surface-300 text-surface-800 rounded-sm text-sm bg-opacity-50 font-normal;
+      }
+
+      table {
+        @apply w-full my-12 border-collapse rounded-lg overflow-hidden;
+
+        thead {
+          @apply bg-surface-200 text-primary-300;
+
+          tr:first-child {
+            th:first-child {
+              @apply rounded-l;
+            }
+
+            th:last-child {
+              @apply rounded-r;
+            }
+          }
+
+          th {
+            @apply font-bold text-left px-6 py-4 border-2 border-surface-300;
+          }
+        }
+
+        tbody {
+
+          tr {
+
+            &:nth-child(odd) {
+              @apply bg-surface-300;
+            }
+
+            &:nth-child(even) {
+              @apply bg-surface-300;
+            }
+
+            td {
+              @apply px-4 py-2 border-2 border-primary-400 border-opacity-25 font-normal;
+            }
+
+            &:last-child {
+              td:first-child {
+                @apply rounded-bl;
+              }
+
+              td:last-child {
+                @apply rounded-br;
+              }
+            }
+          }
+        }
       }
     }
   }
 }
 
 body * {
-  @apply box-border;
+  @apply box-border scroll-smooth;
 }

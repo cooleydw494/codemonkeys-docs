@@ -2,18 +2,19 @@
   <section title="CodeMonkeys Landing Page content">
 
     <div class="intro">
-      <p class="mb-2 text-surface-700">
+      <h1 class="mb-2 text-surface-700">
         CodeMonkeys Framework Documentation
-      </p>
-      <p class="text-xs">
-        Visit the <a class="link" :href="sphinxLink" target="_blank">Sphinx Docs</a> for sourcecode documentation
-      </p>
+      </h1>
     </div>
 
     <div class="img-container">
       <img src="../assets/codemonkeys.png"
          alt="CodeMonkeys artistic illustration">
     </div>
+
+    <p class="text-sm">
+      Visit the <a class="link" :href="sphinxLink" target="_blank">Sphinx Docs</a> for sourcecode documentation
+    </p>
 
   </section>
 </template>
@@ -37,12 +38,12 @@
     }
 
     .img-container {
-      @apply relative rounded-xl;
+      @apply relative rounded-xl mb-8;
       height: 70%;
       overflow-y: hidden;
 
       img {
-        @apply w-full max-w-xl lg:max-w-2xl xl:max-w-3xl rounded-xl;
+        @apply w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl rounded-xl;
         opacity: .7;
         margin-top: -9%;
       }
