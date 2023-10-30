@@ -22,4 +22,4 @@ To generate a scaffolded Automation, use the `monk make` framework command:
 monk make automation my_automation
 ```
 
-This will generate the class `MyAutomation(Automation)` in `automations/my_automation.py`. You can then run your automation with `monk -a my_automation`. 
+This will generate the class `MyAutomation(Automation)` in `automations/my_automation.py`, which can be run with `monk -a my_automation`. 

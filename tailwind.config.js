@@ -14,15 +14,15 @@ module.exports = {
         'primary-700': '#c6ddff',
         'primary-800': '#d9e8ff',
 
+        'surface-100': '#16141c',
+        'surface-200': '#2b2931',
+        'surface-300': '#39373d',
+        'surface-400': '#5a585f',
+        'surface-500': '#737277',
+        'surface-600': '#8d8c91',
+        'surface-700': '#a7a6aa',
+        'surface-800': '#c1c0c3',
 
-        'surface-100': '#000000',
-        'surface-200': '#1e1e1e',
-        'surface-300': '#353535',
-        'surface-400': '#4e4e4e',
-        'surface-500': '#696969',
-        'surface-600': '#858585',
-        'surface-700': '#a1a1a1',
-        'surface-800': '#bdbdbd',
 
       },
     },

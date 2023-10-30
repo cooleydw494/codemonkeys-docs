@@ -1,31 +1,20 @@
 <template>
   <section title="CodeMonkeys Landing Page content">
 
-    <div class="intro">
-      <h1 class="mb-2 text-surface-700">
-        CodeMonkeys Framework Documentation
-      </h1>
-    </div>
+    <p class="intro">
+      CodeMonkeys Framework Docs
+    </p>
 
     <div class="img-container">
       <img src="../assets/codemonkeys.png"
          alt="CodeMonkeys artistic illustration">
     </div>
 
-    <p class="text-sm">
-      Visit the <a class="link" :href="sphinxLink" target="_blank">Sphinx Docs</a> for sourcecode documentation
-    </p>
-
   </section>
 </template>
 <script>
   export default {
     name: 'HomePage',
-    data() {
-      return {
-        sphinxLink: 'https://cooleydw494.github.io/codemonkeys'
-      }
-    }
   }
 </script>
 
@@ -34,11 +23,11 @@
     @apply w-full h-full flex flex-col items-center justify-center;
 
     .intro {
-      @apply mb-6 text-center text-surface-600;
+      @apply mb-6 text-center text-lg;
     }
 
     .img-container {
-      @apply relative rounded-xl mb-8;
+      @apply relative rounded-xl;
       height: 70%;
       overflow-y: hidden;
 

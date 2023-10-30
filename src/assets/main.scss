@@ -24,7 +24,7 @@ body {
     }
 
     h2 {
-      @apply text-xl mt-20;
+      @apply text-xl;
     }
 
     h3 {
@@ -64,9 +64,26 @@ body {
 
     .md-content {
 
+      ul, ol {
+        @apply py-1 mt-4 list-disc list-inside bg-surface-300 rounded-lg text-surface-800 font-normal text-sm;
+
+        li {
+          @apply ml-4 my-3;
+        }
+
+        ul, ol {
+          @apply py-0 mt-0;
+
+          li {
+            @apply ml-8;
+            list-style: circle;
+          }
+        }
+      }
+
       .table-of-contents {
-        ul {
-          //
+        ul, ol {
+          @apply inline-block pr-4;
         }
       }
 
@@ -80,6 +97,10 @@ body {
         em:first-child {
           @apply text-xs;
         }
+      }
+
+      h2 {
+        @apply pt-6 mt-8 border-t-2 border-primary-400 border-opacity-5;
       }
 
 
@@ -121,7 +142,7 @@ body {
           }
 
           th {
-            @apply font-bold text-left px-6 py-4 border-2 border-surface-300;
+            @apply font-bold text-left px-6 py-4 border-2 border-opacity-25 border-primary-400;
           }
         }
 
