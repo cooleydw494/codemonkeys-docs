@@ -23,6 +23,7 @@ module.exports = {
         'surface-700': '#a7a6aa',
         'surface-800': '#c1c0c3',
 
+        'inline-code': '#f08d49',
 
       },
     },
