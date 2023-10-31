@@ -4,15 +4,15 @@ A framework for automating GPT-powered tasks, from simple to complex. Sphinx doc
 
 [toc]
 
-## Overview 🌐
-
-CodeMonkeys gives devs control over their automated GPT logic. The current focus is working on codebases but it is lovingly designed to enable automations of all kinds. This framework aims to use AI effectively, while being reliable, predictable, and tailored to your needs. There is a strong focus on only involving AI at crucial areas of strength, and using good old-fashioned code for everything else.
-
-## Alpha Status (10-10-2023) 🚧
+## 🚧 Alpha Status
 
 There will soon be a stable Alpha release focused on establishing the framework's architecture/concepts to a point of relative stability, and providing a flexible, immediately useful default Automation that is instructional in how it utilizes the framework.
 
-## One-shot Prompts
+## 🌐 Overview
+
+CodeMonkeys gives devs control over their automated GPT logic. The current focus is working on codebases but it is lovingly designed to enable automations of all kinds. This framework aims to use AI effectively, while being reliable, predictable, and tailored to your needs. There is a strong focus on only involving AI at crucial areas of strength, and using good old-fashioned code for everything else.
+
+## 🎯 One-shot Prompts
 
 CodeMonkeys is designed to utilize one-shot prompts at an atomic level, which an emphasis on breaking down AI-powered tasks into small, manageable pieces. The name comes from the idea that if you break down coding concerns into atomic tasks that even a monkey could do, you can get predictable results that are genuinely useful. This paradigm works well for simple use-cases like translating text, documenting code, writing TODOs, adding type-hints, etc.
 
@@ -22,7 +22,7 @@ Eventually CodeMonkeys will support other modes of prompting, but I strongly bel
 
 _Important: The biggest current limitation of this strategy is token length. There is no implementation of handling longer files. While summarization can help for context, it is not a practical strategy for longer code files which you need the full contents of. You generally need a file/prompt to take up 1/2 or less of the max token limit to get the results you need, so this is problematic for extensive files._
 
-## Medium-term Goals 📅
+## 📅 Medium-term Goals
 Some concerns have been set aside as I prepare for a stable Alpha release.
 
 The next major focuses are:

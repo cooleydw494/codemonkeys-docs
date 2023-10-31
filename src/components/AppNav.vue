@@ -94,19 +94,19 @@ export default {
     }
 
     &.desktop-nav {
-      @apply hidden md:inline-block rounded-lg;
-      @apply w-44 lg:w-52 xl:w-56 -ml-6;
+      @apply hidden md:inline-block rounded;
+      @apply w-44 lg:w-52 xl:w-72 -ml-6;
     }
   }
 
   .nav-item {
     @apply bg-surface-300 bg-opacity-100;
-    @apply block pr-4 lg:pr-8 py-3 text-right;
+    @apply block pr-4 lg:pr-8 py-3 lg:py-4 text-right;
     @apply border-surface-500 border-solid border-b-2 border-opacity-50;
     @apply text-white tracking-wide;
     @apply hover:text-primary-400 hover:bg-surface-200 transition-colors duration-200;
 
-    @apply rounded-lg;
+    @apply rounded;
 
     &.router-link-active, &:hover {
       @apply rounded-t-none drop-shadow-md;

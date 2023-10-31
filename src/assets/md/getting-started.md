@@ -2,7 +2,7 @@
 
 [toc]
 
-## Installation
+## 🚀 Installation
 
 First, install the framework with pip:
 
@@ -20,7 +20,7 @@ monk-new [project_name]
 
 `cd` into your project and run `monk` or `monk help` to test your installation.
 
-## Structure
+## 📁 Structure
 
 CodeMonkeys' project structure aims to allow you to build/configure/run your automations in a simple, powerful way.
 You're encouraged to get creative with your Automation/Command/Barrel `run()` methods, custom config properties, and

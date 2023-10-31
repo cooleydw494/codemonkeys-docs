@@ -74,7 +74,11 @@ export default {
 
   .table-of-contents {
     ul, ol {
-      @apply inline-block mt-4 pl-2 pr-6;
+      @apply inline-block pl-0 mt-4 pr-6;
+
+      li {
+        @apply list-none;
+      }
     }
   }
 
@@ -86,8 +90,7 @@ export default {
     }
 
     em:first-child {
-      @apply block -mt-2 text-xs text-surface-800;
-      line-height: 1rem;
+      @apply block -mt-2 text-xs font-semibold text-surface-800;
     }
   }
 
