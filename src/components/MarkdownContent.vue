@@ -55,17 +55,18 @@ export default {
 .md-content {
 
   ul, ol {
-    @apply py-1 mt-4 list-disc list-inside bg-surface-300 bg-opacity-90 rounded-lg text-surface-800 font-normal text-sm;
+    @apply inline-block pl-2 pr-6 py-2 mt-0 list-disc list-inside bg-surface-300 font-normal text-sm;
+    @apply rounded drop-shadow shadow;
 
     li {
-      @apply ml-4 my-3;
+      @apply ml-6 my-3 w-full;
     }
 
     ul, ol {
-      @apply py-0 mt-0 bg-transparent;
+      @apply block py-0 mt-0 bg-transparent drop-shadow-none shadow-none;
 
       li {
-        @apply ml-8;
+        @apply ml-12;
         list-style: circle;
       }
     }
@@ -73,7 +74,7 @@ export default {
 
   .table-of-contents {
     ul, ol {
-      @apply inline-block pl-2 pr-6;
+      @apply inline-block mt-4 pl-2 pr-6;
     }
   }
 
@@ -85,7 +86,8 @@ export default {
     }
 
     em:first-child {
-      @apply block -mt-2 text-xs text-surface-700;
+      @apply block -mt-2 text-xs text-surface-800;
+      line-height: 1rem;
     }
   }
 
@@ -115,7 +117,8 @@ export default {
   }
 
   table {
-    @apply w-full my-12 border-collapse rounded-lg overflow-hidden;
+    @apply w-full my-12 border-collapse overflow-hidden;
+    @apply rounded drop-shadow shadow;
 
     code {
       @apply bg-primary-400 bg-opacity-10;
