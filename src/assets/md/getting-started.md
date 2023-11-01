@@ -1,6 +1,6 @@
-# Getting Started
-
 [toc]
+
+# Getting Started
 
 ## 🚀 Installation
 

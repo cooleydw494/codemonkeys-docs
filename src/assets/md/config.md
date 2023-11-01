@@ -1,6 +1,6 @@
-# Configuration
-
 [toc]
+
+# Configuration
 
 ## 🐒 Monkeys
 Monkeys are your tool for specifying the exact behavior of your Automations. Your prompts, models, temperature, paths, and behavior specifications live here. The class-based approach unlocks advantages like inheritance, custom logic, and lifecycle hooks, but at heart the Monkey class maintains the simplicity of a config file.

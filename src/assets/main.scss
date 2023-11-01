@@ -1,7 +1,7 @@
 @import 'modern-normalize/modern-normalize.css';
 @import 'https://use.typekit.net/zhq1xpb.css';
-@import "./tailwind.css";
 @import "./prism.css";
+@import "./tailwind.css";
 
 body {
   font-family: 'darkmode-mono-on', 'sans-serif';
@@ -20,15 +20,15 @@ body {
     }
 
     h1 {
-      @apply text-primary-400 text-2xl;
+      @apply text-primary-400 text-xl md:text-2xl;
     }
 
     h2 {
-      @apply text-xl;
+      @apply text-lg md:text-xl;
     }
 
     h3 {
-      @apply text-lg;
+      @apply text-base md:text-lg;
     }
 
     h4 {

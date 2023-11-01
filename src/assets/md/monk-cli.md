@@ -1,9 +1,9 @@
+[toc]
+
 # Monk CLI 🐵
 
 CodeMonkeys' CLI tool is integral to usage of the framework. The `monk` command can be run anywhere in a CodeMonkeys
 project, and will always run in the context of the project root.
-
-[toc]
 
 ## Usage
 

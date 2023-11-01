@@ -13,7 +13,7 @@ export default {
 <style lang="scss" scoped>
 
 .page {
-  @apply w-full relative px-2 py-12 overflow-y-scroll;
+  @apply w-full relative px-2.5 py-12 overflow-y-scroll;
   @apply md:px-8;
   height: calc(100vh);
 }

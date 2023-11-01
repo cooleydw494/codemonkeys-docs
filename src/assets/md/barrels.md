@@ -1,6 +1,6 @@
-# Barrels
-
 [toc]
+
+# Barrels
 
 Barrels in CodeMonkeys are a powerful way to bundle several components together to form a larger functionality. These are reusable and can vastly simplify the code structure.
 

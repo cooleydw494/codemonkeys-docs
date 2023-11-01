@@ -55,26 +55,28 @@ export default {
 .md-content {
 
   ul, ol {
-    @apply inline-block pl-2 pr-6 py-2 mt-0 list-disc list-inside bg-surface-300 font-normal text-sm;
+    @apply inline-block pl-2 pr-6 py-2 mt-0 list-disc list-inside bg-surface-300 font-normal;
     @apply rounded drop-shadow shadow;
 
     li {
-      @apply ml-6 my-3 w-full;
+      @apply ml-2 md:ml-6 my-3 w-full;
     }
 
     ul, ol {
-      @apply block py-0 mt-0 bg-transparent drop-shadow-none shadow-none;
+      @apply py-0 mt-0 bg-transparent drop-shadow-none shadow-none;
 
       li {
-        @apply ml-12;
+        @apply ml-8 md:ml-12;
         list-style: circle;
       }
     }
   }
 
   .table-of-contents {
+    @apply 2xl:sticky 2xl:-ml-80 2xl:top-0;
+
     ul, ol {
-      @apply inline-block pl-0 mt-4 pr-6;
+      @apply 2xl:absolute w-full md:w-64 inline-block pl-0 mt-4 2xl:mt-0 pr-6;
 
       li {
         @apply list-none;
@@ -90,7 +92,7 @@ export default {
     }
 
     em:first-child {
-      @apply block -mt-2 text-xs font-semibold text-surface-800;
+      @apply block text-surface-700;
     }
   }
 
@@ -107,7 +109,7 @@ export default {
   }
 
   code {
-    @apply px-1 bg-primary-400 bg-opacity-10 text-surface-800 rounded-sm text-sm font-normal;
+    @apply px-1 bg-primary-400 bg-opacity-10 text-surface-800 rounded-sm font-normal;
   }
 
   pre {
@@ -120,7 +122,7 @@ export default {
   }
 
   table {
-    @apply w-full my-12 border-collapse overflow-hidden;
+    @apply my-12 border-collapse overflow-x-scroll;
     @apply rounded drop-shadow shadow;
 
     code {

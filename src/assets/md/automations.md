@@ -1,6 +1,6 @@
-# Automations
-
 [toc]
+
+# Automations
 
 ## Run an Automation 
 
