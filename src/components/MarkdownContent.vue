@@ -1,7 +1,8 @@
 <template>
   <div class="md-content"
-       v-if="parsedMarkdown"
-       v-html="parsedMarkdown"></div>
+       v-html="parsedMarkdown"
+       ref="mdContent">
+  </div>
 </template>
 
 <script>
@@ -26,10 +27,36 @@ export default {
   data() {
     return {
       parsedMarkdown: null,
+      activeH2: null,
+      observer: null,
     };
   },
-  mounted() {
+  created() {
     this.parseMarkdown();
+  },
+  mounted() {
+    this.observeH2s();
+  },
+  beforeDestroy() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  },
+  watch: {
+    activeH2(newValue, oldValue) {
+      console.log(newValue, oldValue);
+      if (oldValue) {
+        const oldActiveElement = this.$refs.mdContent.querySelector(`.table-of-contents a[href="#${oldValue}"]`);
+        if (oldActiveElement) {
+          oldActiveElement.classList.remove('active-anchor');
+        }
+      }
+
+      const newActiveElement = this.$refs.mdContent.querySelector(`.table-of-contents a[href="#${newValue}"]`);
+      if (newActiveElement) {
+        newActiveElement.classList.add('active-anchor');
+      }
+    }
   },
   methods: {
     parseMarkdown() {
@@ -38,14 +65,42 @@ export default {
             highlightInlineCode: true,
             plugins: ['toolbar', 'copy-to-clipboard'],
           })
-          .use(markdownItAnchor, {permalink: false})
-          .use(markdownItTocDoneRight, {format: this.formatToc, level: 2});
+          .use(markdownItAnchor, {permalink: false, slugify: this.customSlugify})
+          .use(markdownItTocDoneRight, {format: this.formatToc, level: 2, slugify: this.customSlugify});
 
       this.parsedMarkdown = md.render(this.markdown);
     },
     formatToc(x, htmlencode) {
       return `<span>${htmlencode(x)}</span>`;
     },
+    observeH2s() {
+      const options = {
+        root: this.$refs.mdContent.parentElement.parentElement,
+        threshold: 0  // Adjust this value based on your needs
+      };
+
+      this.observer = new IntersectionObserver((entries) => {
+        let visibleEntries = entries.filter(entry => entry.isIntersecting);
+
+        // Assuming you want the first (top-most) visible h2
+        if (visibleEntries.length) {
+          this.activeH2 = visibleEntries[0].target.id;
+          console.log(this.activeH2);
+        }
+      }, options);
+
+      // Observe all h2 elements
+      this.$refs.mdContent.parentElement.parentElement.querySelectorAll('h2').forEach(h2 => {
+        this.observer.observe(h2);
+      });
+    },
+    customSlugify(s) {
+      // Removing emojis and other non-text symbols
+      let stringWithoutEmojis = s.replace(/[\p{Emoji}]/gu, '');
+
+      // Transforming to a URL-friendly format
+      return encodeURIComponent(stringWithoutEmojis.trim().replace(/\s+/g, '-').toLowerCase());
+    }
   },
 }
 </script>
@@ -55,11 +110,11 @@ export default {
 .md-content {
 
   ul, ol {
-    @apply inline-block pl-2 pr-6 py-2 mt-0 list-disc list-inside bg-surface-300 font-normal;
+    @apply block pl-2 pr-6 py-2 mt-0 list-disc list-inside bg-surface-300 text-sm font-semibold;
     @apply rounded drop-shadow shadow;
 
     li {
-      @apply ml-2 md:ml-6 my-3 w-full;
+      @apply ml-2 md:ml-6 my-3.5 w-full;
     }
 
     ul, ol {
@@ -68,6 +123,10 @@ export default {
       li {
         @apply ml-8 md:ml-12;
         list-style: circle;
+
+        &:last-child {
+          @apply mb-6;
+        }
       }
     }
   }
@@ -80,6 +139,10 @@ export default {
 
       li {
         @apply list-none;
+
+        a.active-anchor {
+          @apply bg-surface-200 px-2 py-1 transition-all duration-200 transform;
+        }
       }
     }
   }
