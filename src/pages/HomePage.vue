@@ -27,7 +27,7 @@
     }
 
     .img-container {
-      @apply relative rounded-xl;
+      @apply relative rounded-xl mb-16;
       height: 70%;
       overflow-y: hidden;
 
