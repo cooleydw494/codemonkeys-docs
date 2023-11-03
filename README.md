@@ -10,7 +10,7 @@ This is the repository is for the nice, friendly docs that will teach you to use
 
 ## 🛠 Contributing
 
-A GitHub Action to build/deploy the docs to our S3 bucket, and the main content is entirely written in markdown, so contributing is easy!
+A GitHub Action to builds and deploys the docs, and the main content is entirely written in markdown, so contributing is easy (for me too)!
 
 _If you want to contribute, please fork the repo and create a PR._
   

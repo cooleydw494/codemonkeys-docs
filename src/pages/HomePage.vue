@@ -2,7 +2,7 @@
   <section title="CodeMonkeys Landing Page content">
 
     <p class="intro">
-      CodeMonkeys Framework Docs
+      CodeMonkeys Docs
     </p>
 
     <div class="img-container">
@@ -20,14 +20,14 @@
 
 <style lang="scss" scoped>
   section {
-    @apply w-full h-full flex flex-col items-center justify-center;
+    @apply w-full h-full 2xl:-ml-16 flex flex-col items-center justify-center;
 
     .intro {
-      @apply mb-6 text-center text-lg;
+      @apply mb-14 text-center text-4xl tracking-wider font-bold text-surface-800;
     }
 
     .img-container {
-      @apply relative rounded-xl mb-16;
+      @apply relative rounded-xl mb-12 lg:mb-32;
       height: 70%;
       overflow-y: hidden;
 

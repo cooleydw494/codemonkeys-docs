@@ -66,7 +66,7 @@ export default {
             plugins: ['toolbar', 'copy-to-clipboard'],
           })
           .use(markdownItAnchor, {permalink: false, slugify: this.customSlugify})
-          .use(markdownItTocDoneRight, {format: this.formatToc, level: 2, slugify: this.customSlugify});
+          .use(markdownItTocDoneRight, {format: this.formatToc, level: [2], slugify: this.customSlugify});
 
       this.parsedMarkdown = md.render(this.markdown);
     },
@@ -135,13 +135,24 @@ export default {
     @apply 2xl:sticky 2xl:-ml-80 2xl:top-0;
 
     ul, ol {
-      @apply 2xl:absolute w-full md:w-64 inline-block pl-0 mt-4 2xl:mt-0 pr-6;
+      @apply inline-block w-full rounded;
+      @apply mt-4 pr-6;
+      @apply md:w-64 md:pl-0;
+      @apply 2xl:absolute 2xl:mt-0;
 
       li {
-        @apply list-none;
+        @apply list-none p-0;
 
-        a.active-anchor {
-          @apply bg-surface-200 px-2 py-1 transition-all duration-200 transform;
+        a {
+          @apply w-full rounded-sm px-2 md:px-4 py-2 -mr-5 md:-ml-3 -my-2;
+
+          &.active-anchor {
+            @apply bg-surface-200 bg-opacity-75 transition-all duration-300 transform;
+          }
+        }
+
+        ol {
+          @apply hidden;
         }
       }
     }
@@ -149,9 +160,10 @@ export default {
 
   p {
     @apply my-6;
+    line-height: 1.25rem;
 
     em {
-      @apply text-primary-400 text-opacity-75;
+      @apply text-inline-code text-opacity-75;
     }
 
     em:first-child {
@@ -172,7 +184,15 @@ export default {
   }
 
   code {
-    @apply px-1 bg-primary-400 bg-opacity-10 text-surface-800 rounded-sm font-normal;
+    @apply px-1 bg-primary-800 bg-opacity-5 rounded-sm font-normal;
+    padding-top: .0725rem;
+    padding-bottom: .0725rem;
+    margin-top: -.0725rem;
+    margin-bottom: -.0725rem;
+
+    *:first-child {
+      @apply -ml-1;
+    }
   }
 
   pre {
@@ -193,7 +213,7 @@ export default {
     }
 
     thead {
-      @apply bg-surface-200 text-primary-300;
+      @apply bg-surface-100 bg-opacity-20 text-primary-300 rounded;
 
       tr:first-child {
         th:first-child {
@@ -206,24 +226,22 @@ export default {
       }
 
       th {
-        @apply font-bold text-left px-6 py-4 border-2 border-opacity-25 border-primary-400;
+        @apply font-bold text-left px-6 py-4 border border-opacity-20 border-primary-200;
       }
     }
 
     tbody {
+      @apply rounded;
 
       tr {
-
-        &:nth-child(odd) {
-          @apply bg-surface-300;
-        }
-
-        &:nth-child(even) {
-          @apply bg-surface-300;
-        }
+        @apply bg-surface-300;
 
         td {
-          @apply px-4 py-2 border-2 border-primary-400 border-opacity-25 text-surface-800 font-normal;
+          @apply px-4 py-2 border border-primary-200 border-opacity-20 text-surface-800 font-normal;
+
+          code {
+            @apply bg-surface-200 bg-opacity-60;
+          }
         }
 
         &:last-child {

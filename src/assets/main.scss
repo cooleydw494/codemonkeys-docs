@@ -16,11 +16,11 @@ body {
 
     h1, h2, h3, h4, h5, h6 {
       @apply mt-8 mb-4;
-      @apply font-bold text-primary-500;
+      @apply font-bold text-primary-400 text-opacity-90;
     }
 
     h1 {
-      @apply text-primary-400 text-xl md:text-2xl;
+      @apply text-primary-300 text-xl md:text-2xl;
     }
 
     h2 {
@@ -28,7 +28,7 @@ body {
     }
 
     h3 {
-      @apply text-base md:text-lg;
+      @apply text-base md:text-lg text-primary-400;
     }
 
     h4 {
@@ -58,7 +58,7 @@ body {
 
     .link, .md-content a {
       @apply inline-block;
-      @apply text-primary-600 font-normal;
+      @apply text-primary-600 font-medium;
       @apply hover:text-primary-100 transition-colors duration-200;
     }
   }

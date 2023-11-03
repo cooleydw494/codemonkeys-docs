@@ -24,7 +24,7 @@ module.exports = {
                 'surface-500': '#737277',
                 'surface-600': '#8d8c91',
                 'surface-700': '#a7a6aa',
-                'surface-800': '#c1c0c3',
+                'surface-800': '#c8c7c9',
 
                 'inline-code': '#f08d49',
 
@@ -34,6 +34,9 @@ module.exports = {
             },
             screens: {
                 '3xl': '1720px',
+            },
+            backgroundOpacity: {
+                '7.5': '0.075',
             }
         },
     },

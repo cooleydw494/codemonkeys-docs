@@ -1,6 +1,6 @@
 [toc]
 
-# CodeMonkeys Framework
+# CodeMonkeys
 
 A framework for automating GPT-powered tasks, from simple to complex. Sphinx docs [here](https://cooleydw494.github.io/codemonkeys).
 

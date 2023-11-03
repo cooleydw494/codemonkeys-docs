@@ -73,11 +73,11 @@ export default {
 <style lang="scss" scoped>
 
 .nav-container {
-  @apply flex justify-center items-center pb-4;
+  @apply flex justify-center items-center;
   @apply absolute md:relative w-full md:w-auto;
 
   .hamburger {
-    @apply z-50 -mt-6 bg-surface-200;
+    @apply z-50 -mt-5 bg-surface-200;
   }
 
   nav {
@@ -90,7 +90,7 @@ export default {
       @apply md:hidden flex flex-col rounded;
 
       .nav-item {
-        @apply rounded-b-lg text-center py-4 pr-0;
+        @apply rounded-b text-center py-4 pr-0;
 
         &:first-child {
           @apply rounded-t-sm;
@@ -100,31 +100,30 @@ export default {
 
     &.desktop-nav {
       @apply hidden md:inline-block rounded;
-      @apply w-44 lg:w-52 xl:w-64 -ml-6;
+      @apply w-44 lg:w-52 xl:w-64 -ml-6 -mt-8;
     }
   }
 
   .nav-item {
     @apply bg-surface-300 bg-opacity-100;
     @apply block pr-4 lg:pr-8 py-3 lg:py-4 text-right;
-    @apply border-surface-500 border-solid border-b-2 border-opacity-50;
+    @apply border-primary-400 border-solid border-b-2 border-opacity-10;
     @apply font-medium text-white tracking-wide;
     @apply hover:text-primary-400 hover:bg-surface-200 transition-colors duration-200;
 
-    @apply rounded;
+    //@apply rounded;
 
     &.router-link-active, &:hover {
       @apply rounded-t-none drop-shadow-md;
-      @apply font-semibold text-primary-400 bg-surface-200 transition-colors duration-200;
+      @apply font-medium text-primary-300 bg-surface-200 bg-opacity-75 transition-colors duration-200;
     }
 
     &:first-child {
-      @apply rounded-t-sm pt-4;
-      @apply border-t-2;
+      @apply rounded-tr;
     }
 
     &:last-child {
-      @apply rounded-br-md;
+      @apply rounded-br border-none;
     }
   }
 
