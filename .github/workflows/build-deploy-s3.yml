@@ -21,6 +21,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-          AWS_BUCKET_NAME: codemonkeys-docs
-          APP_SOURCE_CODE: ./
-          BUILD_COMMAND: "npm run build --production"
+          AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+          # APP_SOURCE_CODE: default is ./
+          # BUILD_COMMAND: default is production
