@@ -3,6 +3,9 @@ module.exports = {
     content: ['./src/**/*.vue', './src/**/*.js', './src/**/*.scss'],
     theme: {
         extend: {
+
+            // https://colorffy.com/dark-theme-generator
+
             colors: {
 
                 'primary-100': '#059fff',
