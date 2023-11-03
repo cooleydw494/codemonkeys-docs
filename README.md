@@ -10,7 +10,7 @@ This is the repository is for the nice, friendly docs that will teach you to use
 
 ## 🛠 Contributing
 
-This repository has a GitHub Action that will automatically build and deploy the docs to the S3 bucket hosting the webpage upon push/merge to main.
+A GitHub Action to build/deploy the docs to our S3 bucket, and the main content is entirely written in markdown, so contributing is easy!
 
 _If you want to contribute, please fork the repo and create a PR._
   
@@ -23,12 +23,7 @@ _If you want to contribute, please fork the repo and create a PR._
   - highly customized using Tailwind and SCSS
 - eslint is enforced
 
-I hope by architecting the docs in this way, to make it easy to keep up with the framework and prevent the docs from becoming a distraction. Editing the markdown alone is simple and fast.
-
-**Contribution Preferences**:
-I'll potentially accept PRs working on either the markdown content or the Vue app itself, but I'd rather not have PRs that make changes to both at the same time.
-
-I'll highly prioritize updated markdown content over changes to the surrounding app/styles.
+**Please make PRs that only change either markdown content or the Vue app/styles, not both.**
 
 
 ## 📝 Note About Sphinx
