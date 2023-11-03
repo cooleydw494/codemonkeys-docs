@@ -26,4 +26,4 @@ jobs:
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
           AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
           # APP_SOURCE_CODE: default is ./
-          # BUILD_COMMAND: default is production
+          BUILD_COMMAND: "npm run build --production"
