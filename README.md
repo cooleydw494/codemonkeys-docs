@@ -1,4 +1,4 @@
-# CodeMonkeys Docs 🐒
+# 🐒 CodeMonkeys Docs
 
 This is the repository is for the nice, friendly docs that will teach you to use the **CodeMonkeys** framework. If that seems off, you may be looking for one of these:
 
