@@ -189,17 +189,13 @@ export default {
     padding-bottom: .0725rem;
     margin-top: -.0725rem;
     margin-bottom: -.0725rem;
-
-    *:first-child {
-      @apply -ml-1;
-    }
   }
 
   pre {
     @apply mt-4 mb-6 bg-surface-300 rounded-md;
 
     code {
-      @apply bg-transparent;
+      @apply  pl-0 bg-transparent;
     }
 
   }
