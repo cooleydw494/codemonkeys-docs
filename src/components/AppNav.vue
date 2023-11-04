@@ -19,9 +19,6 @@
 
     <!-- Desktop View -->
     <nav class="desktop-nav" v-else>
-      <!--      <router-link class="home nav-item" :to="{name: 'HomePage'}">-->
-      <!--        <span>CodeMonkeys</span>-->
-      <!--      </router-link>-->
       <router-link v-for="(navItem, index) in navItems"
                    :key="navItem.name"
                    :tabindex="index+1"

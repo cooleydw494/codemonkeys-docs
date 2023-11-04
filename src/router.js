@@ -1,7 +1,6 @@
 import {createRouter, createWebHistory} from 'vue-router'
 
 const routes = [
-    {path: '/', name: 'HomePage', component: () => import('@/pages/HomePage.vue')},
     {path: '/getting-started', name: 'Get Started', component: () => import('@/pages/sections/GettingStarted.vue')},
     {path: '/codemonkeys-explained', name: 'What Is It?', component: () => import('@/pages/sections/WhatIs.vue')},
     {path: '/configuration', name: 'Config', component: () => import('@/pages/sections/ConfigPage.vue')},
