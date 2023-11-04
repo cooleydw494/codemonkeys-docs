@@ -18,7 +18,7 @@ module.exports = {
                 'primary-800': '#d9e8ff',
 
                 'surface-100': '#16141c',
-                'surface-200': '#2a272f',
+                'surface-200': '#28252d',
                 'surface-300': '#353338',
                 'surface-400': '#5a585f',
                 'surface-500': '#737277',

@@ -109,7 +109,7 @@ export default {
 
   ul, ol {
     @apply block pl-2 pr-6 py-2 mt-0 list-disc list-inside bg-surface-300 text-sm font-semibold;
-    @apply rounded drop-shadow shadow;
+    @apply rounded drop-shadow shadow-inner;
 
     li {
       @apply ml-2 md:ml-6 my-3.5 w-full;
@@ -137,6 +137,7 @@ export default {
       @apply mt-4 pr-6;
       @apply md:w-64 md:pl-0;
       @apply xl:absolute 2xl:mt-0;
+      @apply drop-shadow-xl shadow-inner;
 
       li {
         @apply list-none p-0;
@@ -170,7 +171,7 @@ export default {
   }
 
   h2 {
-    @apply pt-6 mt-8 border-t-2 border-primary-400 border-opacity-5;
+    @apply pt-8 mt-16 border-t-2 border-primary-400 border-opacity-10;
   }
 
   div.code-toolbar > .toolbar {
@@ -182,7 +183,7 @@ export default {
   }
 
   code {
-    @apply px-1 bg-primary-800 bg-opacity-5 rounded-sm font-normal;
+    @apply px-1 bg-surface-300 rounded-sm font-normal;
     padding-top: .0725rem;
     padding-bottom: .0725rem;
     margin-top: -.0725rem;
@@ -200,7 +201,7 @@ export default {
 
   table {
     @apply my-12 border-collapse overflow-x-scroll;
-    @apply rounded drop-shadow shadow;
+    @apply rounded drop-shadow shadow-inner;
 
     code {
       @apply bg-primary-400 bg-opacity-10;

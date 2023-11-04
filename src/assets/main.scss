@@ -24,11 +24,11 @@ body {
     }
 
     h2 {
-      @apply text-lg md:text-xl;
+      @apply font-semibold text-lg md:text-xl;
     }
 
     h3 {
-      @apply text-base md:text-lg text-primary-400;
+      @apply font-medium text-sm md:text-base text-white text-opacity-100;
     }
 
     h4 {

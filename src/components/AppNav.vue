@@ -78,16 +78,16 @@ export default {
   }
 
   nav {
-    @apply bg-surface-300 bg-opacity-80 drop-shadow-xl;
+    @apply bg-surface-300 bg-opacity-80 drop-shadow-xl shadow-inner;
     @apply z-50 md:relative;
 
     &.mobile-nav {
       width: 95%;
-      @apply absolute top-0 z-40 mt-8 overflow-y-scroll shadow-2xl drop-shadow-2xl;
+      @apply absolute top-0 z-40 mt-8 overflow-y-scroll shadow-inner drop-shadow-2xl;
       @apply md:hidden flex flex-col rounded;
 
       .nav-item {
-        @apply rounded-b text-center py-4 pr-0;
+        @apply rounded-b text-center py-2 pr-0;
 
         &:first-child {
           @apply rounded-t-sm;
@@ -103,7 +103,7 @@ export default {
 
   .nav-item {
     @apply bg-surface-300 bg-opacity-100;
-    @apply block pr-4 lg:pr-6 py-3 lg:py-4 text-right;
+    @apply block pr-4 lg:pr-6 py-3 text-right;
     @apply border-primary-400 border-solid border-b-2 border-opacity-10;
     @apply font-medium text-white tracking-wide;
     @apply hover:text-primary-400 hover:bg-surface-200 transition-colors duration-200;
@@ -111,7 +111,7 @@ export default {
     //@apply rounded;
 
     &.router-link-active, &:hover {
-      @apply rounded-t-none drop-shadow-md;
+      @apply rounded-t-none drop-shadow-md shadow-inner;
       @apply font-medium text-primary-300 bg-surface-200 bg-opacity-75 transition-colors duration-200;
     }
 

@@ -6,7 +6,6 @@ import './assets/tailwind.css'
 
 router.afterEach((to, from) => {
     nextTick(() => {
-
         // Handle title
         document.title = `${to.name} | CodeMonkeys`;
 
@@ -15,7 +14,8 @@ router.afterEach((to, from) => {
             const element = document.querySelector(to.hash);
             if (element) element.scrollIntoView({behavior: 'smooth'});
         } else {
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            const page = document.querySelector('#app .app-page');
+            page.scrollTo({top: 0, behavior: 'smooth'});
         }
 
     }).then(r => r);

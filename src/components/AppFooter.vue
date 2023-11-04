@@ -35,8 +35,8 @@ export default {
 <style lang="scss" scoped>
 
 .footer {
-  @apply w-full absolute bottom-0 flex justify-start items-center md:items-start;
-  @apply px-6 py-4 text-surface-600 bg-surface-100;
+  @apply w-full h-16 absolute bottom-0 flex justify-start items-center;
+  @apply px-6 text-surface-600 bg-surface-100;
 
   .copyright {
     @apply text-left text-sm pl-6;

@@ -1,14 +1,15 @@
 import {createRouter, createWebHistory} from 'vue-router'
 
 const routes = [
-    {path: '/getting-started', name: 'Get Started', component: () => import('@/pages/sections/GettingStarted.vue')},
-    {path: '/codemonkeys-explained', name: 'What Is It?', component: () => import('@/pages/sections/WhatIs.vue')},
-    {path: '/configuration', name: 'Config', component: () => import('@/pages/sections/ConfigPage.vue')},
+    {path: '/', name: 'Home', redirect: '/what-is-it'},
+    {path: '/get-started', name: 'Get Started', component: () => import('@/pages/sections/GettingStarted.vue')},
+    {path: '/what-is-it', name: 'What Is It?', component: () => import('@/pages/sections/WhatIs.vue')},
+    {path: '/config', name: 'Config', component: () => import('@/pages/sections/ConfigPage.vue')},
     {path: '/monk-cli', name: 'Monk CLI', component: () => import('@/pages/sections/MonkCli.vue')},
     {path: '/commands', name: 'Commands', component: () => import('@/pages/sections/CommandsPage.vue')},
     {path: '/automations', name: 'Automations', component: () => import('@/pages/sections/AutomationsPage.vue')},
     {
-        path: '/function-calling',
+        path: '/funcs',
         name: 'Funcs',
         component: () => import('@/pages/sections/FunctionCalling.vue')
     },

@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="app-page">
     <slot></slot>
   </div>
 </template>
@@ -12,10 +12,10 @@ export default {
 
 <style lang="scss" scoped>
 
-.page {
-  @apply w-full relative px-2.5 py-12 overflow-y-scroll;
+.app-page {
+  @apply w-full relative px-4 py-12 overflow-y-scroll;
   @apply md:px-8;
-  height: calc(100vh);
+  height: calc(100vh - 4rem);
 }
 
 </style>
