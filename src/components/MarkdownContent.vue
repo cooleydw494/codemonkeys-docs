@@ -44,7 +44,6 @@ export default {
   },
   watch: {
     activeH2(newValue, oldValue) {
-      console.log(newValue, oldValue);
       if (oldValue) {
         const oldActiveElement = this.$refs.mdContent.querySelector(`.table-of-contents a[href="#${oldValue}"]`);
         if (oldActiveElement) {
@@ -85,7 +84,6 @@ export default {
         // Assuming you want the first (top-most) visible h2
         if (visibleEntries.length) {
           this.activeH2 = visibleEntries[0].target.id;
-          console.log(this.activeH2);
         }
       }, options);
 
@@ -132,13 +130,13 @@ export default {
   }
 
   .table-of-contents {
-    @apply 2xl:sticky 2xl:-ml-80 2xl:top-0;
+    @apply xl:sticky xl:-ml-80 xl:top-0;
 
     ul, ol {
       @apply inline-block w-full rounded;
       @apply mt-4 pr-6;
       @apply md:w-64 md:pl-0;
-      @apply 2xl:absolute 2xl:mt-0;
+      @apply xl:absolute 2xl:mt-0;
 
       li {
         @apply list-none p-0;

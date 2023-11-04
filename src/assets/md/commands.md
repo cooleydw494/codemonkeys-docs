@@ -1,16 +1,16 @@
 [toc]
 # 📜 Commands
 
-CodeMonkeys is heavily CLI-oriented, and Commands are a core concept. There are basic framework Commands, like `monk list --all`, which will list all the _entities_ you have in your project, and you can also easily create your own Commands to do literally anything you want.
+CodeMonkeys is heavily CLI-oriented, and Commands are a core concept. There are basic framework Commands, like `monk list --all`, which will list all the _entities_ you have in your project, and you can easily create open-ended custom Commands.
 
 ## ⌨️ CliRunnable
 The `Command` class, as well as the other _entities_, are a subclass of `CliRunnable`.
 
-The `CliRunnable` class is a base class that provides a common interface for all the _entities_ that can be run from the CLI. It provides a `run()` method, which **must** be implemented in subclasses, that is called when the _entity_ is run from the CLI.
+The `CliRunnable` class is a base class that provides a common interface "cli-runnable" _entities_. It includes a required `run()` method which is called when the _entity_ is run from the CLI.
 
-Other than requiring that a subclass is in fact "runnable", `CliRunnable` mainly provides CLI arg handling. CLI args parsed by `argparse` are passed into the constructor, and easily-configurable class variables are exposed to dictate how the args are handled.
+Beyond that, `CliRunnable` handles CLI arguments. CLI args parsed by `argparse` are passed into the constructor, and class variables are used to configure how the args are handled.
 
-The following class variables can be overridden in subclasses (like a subclass of `Command`):
+These class variables can be overridden in subclasses (such as a custom `Command`):
 
 ```python
 named_arg_keys: list = []

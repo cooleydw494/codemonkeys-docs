@@ -1,12 +1,11 @@
 # 🐒 CodeMonkeys Docs
 
-This is the repository is for the nice, friendly docs that will teach you to use the **CodeMonkeys** framework. If that seems off, you may be looking for one of these:
+This is the repository is for the nice, friendly docs that will teach you to use the **CodeMonkeys** framework. If that's not what you're looking for, try these:
 
-- [CodeMonkeys Docs](https://codemonkeys.lol) (actual webpage)
+- [CodeMonkeys Docs](https://codemonkeys.lol)
 - [CodeMonkeys Repo](https://github.com/cooleydw494/codemonkeys)
 - [Sphinx Docs](https://cooleydw494.github.io/codemonkeys)
 
----
 
 ## 🛠 Contributing
 

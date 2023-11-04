@@ -25,13 +25,16 @@ _Important: The biggest current limitation of this strategy is token length. The
 ## 📅 Medium-term Goals
 Some concerns have been set aside as I prepare for a stable Alpha release.
 
+CliRunnable
+:  - [ ] Add support for `--help` and `--version` args
+
 The next major focuses are:
 - Test Coverage
 - More testing on Windows/Linux (Should Work ™️)
 - Handling long files
 - Streamlined fine-tuning support
 - More open-ended design
-  - framework-level support for non-CLI-bases uses
+  - framework-level support for non-CLI usage
   - GUI for framework (like Vue CLI UI)
 - Expand pre-packaged Automations, Monkeys, Builders
   - focus on function calling support / Funcs

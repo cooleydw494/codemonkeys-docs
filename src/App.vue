@@ -17,15 +17,6 @@ import AppPage from "@/components/AppPage.vue";
 export default {
   name: 'App',
   components: {AppPage, AppFooter, AppNav},
-  // watch: {
-  //   '$route' (to, from) {
-  //     console.log('to', to);
-  //     console.log('from', from);
-  //     this.$nextTick(() => {
-  //       //
-  //     })
-  //   }
-  // },
 }
 </script>
 

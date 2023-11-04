@@ -42,16 +42,16 @@ export default {
       isMobile: window.innerWidth <= 768,
       showMenu: false,
       navItems: [
-        {name: 'WhatIs', label: 'What is it?'},
-        {name: 'GettingStarted', label: 'Get Started'},
-        {name: 'Configuration', label: 'Config'},
-        {name: 'MonkCLI', label: 'Monk CLI'},
+        {name: 'What Is It?', label: 'What is it?'},
+        {name: 'Get Started', label: 'Get Started'},
+        {name: 'Config', label: 'Config'},
+        {name: 'Monk CLI', label: 'Monk CLI'},
         {name: 'Commands', label: 'Commands'},
         {name: 'Automations', label: 'Automations'},
         {name: 'Barrels', label: 'Barrels'},
-        {name: 'AdvancedMonkeys', label: 'Monkeys'},
-        {name: 'FunctionCalling', label: 'Funcs'},
-        {name: 'AdvancedTheme', label: 'Theme'},
+        {name: 'Monkeys', label: 'Monkeys'},
+        {name: 'Funcs', label: 'Funcs'},
+        {name: 'Theme', label: 'Theme'},
         {name: 'Contribution', label: 'Contribute'},
         {name: 'FAQ', label: 'FAQ'},
       ]
@@ -100,13 +100,13 @@ export default {
 
     &.desktop-nav {
       @apply hidden md:inline-block rounded;
-      @apply w-44 lg:w-52 xl:w-64 -ml-6 -mt-8;
+      @apply w-44 lg:w-52 -ml-6 -mt-8;
     }
   }
 
   .nav-item {
     @apply bg-surface-300 bg-opacity-100;
-    @apply block pr-4 lg:pr-8 py-3 lg:py-4 text-right;
+    @apply block pr-4 lg:pr-6 py-3 lg:py-4 text-right;
     @apply border-primary-400 border-solid border-b-2 border-opacity-10;
     @apply font-medium text-white tracking-wide;
     @apply hover:text-primary-400 hover:bg-surface-200 transition-colors duration-200;
