@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
 
 .page-container {
-  @apply flex w-full;
+  @apply flex;
 }
 
 </style>

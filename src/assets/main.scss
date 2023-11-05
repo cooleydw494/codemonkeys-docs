@@ -12,37 +12,41 @@ body {
   word-spacing: -0.2rem;
   @apply scroll-smooth;
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply mt-8 mb-4;
+    @apply font-bold text-primary-400 text-opacity-90;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply mt-8 mb-4;
+    @apply font-bold text-primary-400 text-opacity-90;
+  }
+
+  h1 {
+    @apply text-primary-300 text-xl md:text-2xl;
+  }
+
+  h2 {
+    @apply font-semibold text-lg md:text-xl;
+  }
+
+  h3 {
+    @apply font-medium text-sm md:text-base text-white;
+  }
+
+  h4 {
+    @apply text-base;
+  }
+
+  h5 {
+    @apply text-sm;
+  }
+
+  h6 {
+    @apply text-xs;
+  }
+
   #app {
-
-    h1, h2, h3, h4, h5, h6 {
-      @apply mt-8 mb-4;
-      @apply font-bold text-primary-400 text-opacity-90;
-    }
-
-    h1 {
-      @apply text-primary-300 text-xl md:text-2xl;
-    }
-
-    h2 {
-      @apply font-semibold text-lg md:text-xl;
-    }
-
-    h3 {
-      @apply font-medium text-sm md:text-base text-white text-opacity-100;
-    }
-
-    h4 {
-      @apply text-base;
-    }
-
-    h5 {
-      @apply text-sm;
-    }
-
-    h6 {
-      @apply text-xs;
-    }
-
 
     .button {
       @apply w-32 py-2;
@@ -58,7 +62,7 @@ body {
 
     .link, .md-content a {
       @apply inline-block;
-      @apply text-primary-600 font-medium;
+      @apply text-primary-600 font-medium tracking-wide;
       @apply hover:text-primary-100 transition-colors duration-200;
     }
   }

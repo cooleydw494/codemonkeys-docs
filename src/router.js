@@ -1,9 +1,8 @@
 import {createRouter, createWebHistory} from 'vue-router'
 
 const routes = [
-    {path: '/', name: 'Home', redirect: '/what-is-it'},
+    {path: '/', name: 'CodeMonkeys', component: () => import('@/pages/sections/CodeMonkeys.vue')},
     {path: '/get-started', name: 'Get Started', component: () => import('@/pages/sections/GettingStarted.vue')},
-    {path: '/what-is-it', name: 'What Is It?', component: () => import('@/pages/sections/WhatIs.vue')},
     {path: '/config', name: 'Config', component: () => import('@/pages/sections/ConfigPage.vue')},
     {path: '/monk-cli', name: 'Monk CLI', component: () => import('@/pages/sections/MonkCli.vue')},
     {path: '/commands', name: 'Commands', component: () => import('@/pages/sections/CommandsPage.vue')},

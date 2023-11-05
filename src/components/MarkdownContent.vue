@@ -130,20 +130,21 @@ export default {
   }
 
   .table-of-contents {
-    @apply xl:sticky xl:-ml-80 xl:top-0;
+    @apply block md:inline-block;
+    @apply lg:sticky lg:-ml-64 lg:top-0 lg:-mt-36 lg:pb-36;
 
     ul, ol {
-      @apply inline-block w-full rounded;
-      @apply mt-4 pr-6;
-      @apply md:w-64 md:pl-0;
-      @apply xl:absolute 2xl:mt-0;
+      @apply inline-block w-full lg:-ml-4;
+      @apply mt-4 pr-4;
+      @apply md:w-56 md:pl-0 md:mt-0;
+      @apply lg:absolute 2xl:mt-0;
       @apply drop-shadow-xl shadow-inner;
 
       li {
         @apply list-none p-0;
 
         a {
-          @apply w-full rounded-sm px-2 md:px-4 py-2 -mr-5 md:-ml-3 -my-2;
+          @apply w-full rounded-sm px-2 md:px-4 py-2 -mr-6 md:-ml-4 -my-2;
 
           &.active-anchor {
             @apply bg-surface-200 bg-opacity-75 transition-all duration-300 transform;
@@ -158,7 +159,7 @@ export default {
   }
 
   p {
-    @apply my-6;
+    @apply my-4;
     line-height: 1.25rem;
 
     em {
@@ -170,8 +171,16 @@ export default {
     }
   }
 
+  h1 {
+    @apply lg:mt-0;
+  }
+
   h2 {
-    @apply pt-8 mt-16 border-t-2 border-primary-400 border-opacity-10;
+    @apply pb-4 mt-12 border-b-2 border-primary-300 border-opacity-20;
+  }
+
+  h3 {
+    @apply w-4/5 pb-2 mt-8 border-b-2 border-primary-600 border-opacity-5;
   }
 
   div.code-toolbar > .toolbar {

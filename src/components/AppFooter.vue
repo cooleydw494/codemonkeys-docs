@@ -39,14 +39,15 @@ export default {
   @apply px-6 text-surface-600 bg-surface-100;
 
   .copyright {
-    @apply text-left text-sm pl-6;
+    @apply text-left text-sm.5 pl-6;
   }
 
   .socials {
     @apply flex items-center space-x-4;
 
     .social {
-      @apply w-5 h-5 text-surface-600 hover:text-primary-400 transition-colors duration-200;
+      @apply w-5 h-5 text-surface-600;
+      @apply hover:text-primary-400 transition-colors duration-200;
     }
   }
 }

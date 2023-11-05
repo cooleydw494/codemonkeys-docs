@@ -7,10 +7,10 @@
 <script>
 import DocSection from '../../components/DocSection.vue';
 import MarkdownContent from "@/components/MarkdownContent.vue";
-import mdContent from '@/assets/md/whatis.md';
+import mdContent from '@/assets/md/codemonkeys.md';
 
 export default {
-  name: 'WhatIs',
+  name: 'CodeMonkeys',
   components: {MarkdownContent, DocSection },
   data() {
     return {

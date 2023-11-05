@@ -11,7 +11,7 @@
                    :key="navItem.name"
                    :tabindex="index+1"
                    :to="{name: navItem.name}"
-                   class="nav-item"
+                   class="nav-item link"
                    @click="toggleMenu">
         {{ navItem.label }}
       </router-link>
@@ -23,7 +23,7 @@
                    :key="navItem.name"
                    :tabindex="index+1"
                    :to="{name: navItem.name}"
-                   class="nav-item">
+                   class="nav-item link">
         <span>{{ navItem.label }}</span>
       </router-link>
     </nav>
@@ -39,7 +39,7 @@ export default {
       isMobile: window.innerWidth <= 768,
       showMenu: false,
       navItems: [
-        {name: 'What Is It?', label: 'What is it?'},
+        {name: 'CodeMonkeys', label: 'CodeMonkeys'},
         {name: 'Get Started', label: 'Get Started'},
         {name: 'Config', label: 'Config'},
         {name: 'Monk CLI', label: 'Monk CLI'},
@@ -70,24 +70,25 @@ export default {
 <style lang="scss" scoped>
 
 .nav-container {
-  @apply flex justify-center items-center;
-  @apply absolute md:relative w-full md:w-auto;
+  @apply flex justify-center items-center md:items-start;
+  @apply absolute md:relative w-full md:w-48;
 
   .hamburger {
-    @apply z-50 -mt-5 bg-surface-200;
+    @apply z-50 -mt-6 bg-surface-200;
   }
 
   nav {
-    @apply bg-surface-300 bg-opacity-80 drop-shadow-xl shadow-inner;
+    @apply bg-surface-300 drop-shadow-xl shadow-inner;
     @apply z-50 md:relative;
 
     &.mobile-nav {
       width: 95%;
       @apply absolute top-0 z-40 mt-8 overflow-y-scroll shadow-inner drop-shadow-2xl;
       @apply md:hidden flex flex-col rounded;
+      @apply text-lg;
 
       .nav-item {
-        @apply rounded-b text-center py-2 pr-0;
+        @apply rounded-b text-center py-4;
 
         &:first-child {
           @apply rounded-t-sm;
@@ -96,31 +97,30 @@ export default {
     }
 
     &.desktop-nav {
-      @apply hidden md:inline-block rounded;
-      @apply w-44 lg:w-52 -ml-6 -mt-8;
+      @apply w-full hidden md:inline-block px-2 py-3 ml-4 mt-12;
+      @apply rounded drop-shadow-xl shadow-inner;
     }
   }
 
   .nav-item {
-    @apply bg-surface-300 bg-opacity-100;
-    @apply block pr-4 lg:pr-6 py-3 text-right;
-    @apply border-primary-400 border-solid border-b-2 border-opacity-10;
-    @apply font-medium text-white tracking-wide;
-    @apply hover:text-primary-400 hover:bg-surface-200 transition-colors duration-200;
+    @apply w-full bg-surface-300;
+    @apply rounded-sm block px-4 py-2;
+    @apply transition-all duration-300 transform;
 
-    //@apply rounded;
+    &.router-link-active {
+      @apply bg-surface-100 bg-opacity-40;
+    }
 
-    &.router-link-active, &:hover {
-      @apply rounded-t-none drop-shadow-md shadow-inner;
-      @apply font-medium text-primary-300 bg-surface-200 bg-opacity-75 transition-colors duration-200;
+    &:hover {
+      @apply text-primary-100;
     }
 
     &:first-child {
-      @apply rounded-tr;
+      @apply rounded-t;
     }
 
     &:last-child {
-      @apply rounded-br border-none;
+      @apply rounded-b;
     }
   }
 
