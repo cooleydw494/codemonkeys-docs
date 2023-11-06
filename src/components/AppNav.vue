@@ -102,16 +102,16 @@ export default {
   }
 
   .nav-item {
-    @apply w-full bg-surface-300;
+    @apply w-full;
     @apply rounded-sm block px-4 py-2;
     @apply transition-all duration-300 transform;
 
     &.router-link-active {
-      @apply bg-surface-100 bg-opacity-40;
+      @apply text-white bg-surface-200 bg-opacity-75;
     }
 
     &:hover {
-      @apply text-primary-100;
+      @apply text-white;
     }
 
     &:first-child {

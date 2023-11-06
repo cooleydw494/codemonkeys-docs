@@ -147,7 +147,11 @@ export default {
           @apply w-full rounded-sm px-2 md:px-4 py-2 -mr-6 md:-ml-4 -my-2;
 
           &.active-anchor {
-            @apply bg-surface-200 bg-opacity-75 transition-all duration-300 transform;
+            @apply text-white bg-surface-200 bg-opacity-75 transition-all duration-300 transform;
+          }
+
+          &:hover {
+            @apply text-white;
           }
         }
 
