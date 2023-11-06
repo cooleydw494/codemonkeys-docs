@@ -1,6 +1,6 @@
 <template>
   <doc-section>
-    <markdown-content :markdown="mdContent"></markdown-content>
+    <markdown-content :markdown="mdContent" />
   </doc-section>
 </template>
 
@@ -10,15 +10,16 @@ import MarkdownContent from "@/components/MarkdownContent.vue";
 import {default as mdContent} from '@/assets/md/automations.md';
 
 export default {
+
   name: 'AutomationsPage',
-  components: {MarkdownContent, DocSection},
+
+  components: {DocSection, MarkdownContent},
+
   data() {
     return {
       mdContent,
     }
   },
+
 }
 </script>
-
-<style scoped>
-</style>

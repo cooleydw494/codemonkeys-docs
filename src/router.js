@@ -10,10 +10,9 @@ const routes = [
     {
         path: '/funcs',
         name: 'Funcs',
-        component: () => import('@/pages/sections/FunctionCalling.vue')
+        component: () => import('@/pages/sections/FuncsPage.vue')
     },
     {path: '/barrels', name: 'Barrels', component: () => import('@/pages/sections/BarrelsPage.vue')},
-    {path: '/advanced-theme', name: 'Theme', component: () => import('@/pages/sections/ThemeAdvanced.vue')},
     {
         path: '/advanced-monkeys',
         name: 'Monkeys',

@@ -17,11 +17,6 @@ body {
     @apply font-bold text-primary-400 text-opacity-90;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply mt-8 mb-4;
-    @apply font-bold text-primary-400 text-opacity-90;
-  }
-
   h1 {
     @apply text-primary-300 text-xl md:text-2xl;
   }

@@ -1,6 +1,6 @@
 <template>
   <doc-section>
-    <markdown-content :markdown="mdContent"></markdown-content>
+    <markdown-content :markdown="mdContent" />
   </doc-section>
 </template>
 
@@ -11,18 +11,16 @@ import {default as mdContent} from '@/assets/md/get-started.md';
 
 
 export default {
+
   name: 'GettingStarted',
-  components: {
-    MarkdownContent,
-    DocSection
-  },
+
+  components: {DocSection, MarkdownContent},
+
   data() {
     return {
       mdContent,
     }
   },
+
 };
 </script>
-
-<style lang="scss" scoped>
-</style>

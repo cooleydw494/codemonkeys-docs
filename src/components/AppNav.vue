@@ -48,7 +48,6 @@ export default {
         {name: 'Barrels', label: 'Barrels'},
         {name: 'Monkeys', label: 'Monkeys'},
         {name: 'Funcs', label: 'Funcs'},
-        {name: 'Theme', label: 'Theme'},
         {name: 'Contribution', label: 'Contribute'},
         {name: 'FAQ', label: 'FAQ'},
       ]

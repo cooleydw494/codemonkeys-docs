@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+# Your Favicon Package
 
-    <!-- From RealFaviconGenerator -->
+This package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
+
+## Install instructions
+
+To install this package:
+
+Extract this package in the root of your web site. If your site is <code>http://www.example.com</code>, you should be able to access a file named <code>http://www.example.com/favicon.ico</code>.
+
+Insert the following code in the `head` section of your pages:
+
     <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -16,14 +20,4 @@
     <meta name="msapplication-TileColor" content="#28252d">
     <meta name="theme-color" content="#28252d">
 
-    <title>CodeMonkeys</title>
-</head>
-<body>
-<noscript>
-    <strong>We're sorry but CodeMonkeys Docs doesn't work properly without JavaScript enabled. Please enable it to
-        continue.</strong>
-</noscript>
-<div id="app"></div>
-<!-- built files will be auto injected -->
-</body>
-</html>
+*Optional* - Check your favicon with the [favicon checker](https://realfavicongenerator.net/favicon_checker)

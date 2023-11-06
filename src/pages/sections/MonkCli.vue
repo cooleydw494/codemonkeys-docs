@@ -1,6 +1,6 @@
 <template>
   <doc-section>
-    <markdown-content :markdown="mdContent"></markdown-content>
+    <markdown-content :markdown="mdContent" />
   </doc-section>
 </template>
 
@@ -10,15 +10,16 @@ import mdContent from '@/assets/md/monk-cli.md'
 import MarkdownContent from "@/components/MarkdownContent.vue";
 
 export default {
+
   name: 'MonkCli',
-  components: {MarkdownContent, DocSection },
+
+  components: {DocSection, MarkdownContent},
+
   data() {
     return {
       mdContent,
     }
-  }
+  },
+
 }
 </script>
-
-<style scoped>
-</style>
