@@ -7,7 +7,7 @@
 
     <!-- Mobile View -->
     <nav class="mobile-nav" v-if="showMenu && isMobile">
-      <router-link v-for="(navItem, index) in navItems"
+      <router-link v-for="navItem in navItems"
                    :key="navItem.name"
                    :to="{name: navItem.name}"
                    class="nav-item link"
@@ -18,7 +18,7 @@
 
     <!-- Desktop View -->
     <nav class="desktop-nav" v-else>
-      <router-link v-for="(navItem, index) in navItems"
+      <router-link v-for="navItem in navItems"
                    :key="navItem.name"
                    :to="{name: navItem.name}"
                    class="nav-item link">
