@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
+  <url>
         <loc>https://codemonkeys.lol/</loc>
         <lastmod>2023-11-06</lastmod>
         <changefreq>weekly</changefreq>
@@ -9,61 +9,61 @@
     <url>
         <loc>https://codemonkeys.lol/get-started</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://codemonkeys.lol/config</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://codemonkeys.lol/monk-cli</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://codemonkeys.lol/commands</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://codemonkeys.lol/automations</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://codemonkeys.lol/funcs</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://codemonkeys.lol/barrels</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://codemonkeys.lol/advanced-monkeys</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://codemonkeys.lol/contribution</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
     <url>
         <loc>https://codemonkeys.lol/faq</loc>
         <lastmod>2023-11-06</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
 </urlset>
