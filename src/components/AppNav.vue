@@ -9,7 +9,6 @@
     <nav class="mobile-nav" v-if="showMenu && isMobile">
       <router-link v-for="(navItem, index) in navItems"
                    :key="navItem.name"
-                   :tabindex="index+1"
                    :to="{name: navItem.name}"
                    class="nav-item link"
                    @click="toggleMenu">
@@ -21,7 +20,6 @@
     <nav class="desktop-nav" v-else>
       <router-link v-for="(navItem, index) in navItems"
                    :key="navItem.name"
-                   :tabindex="index+1"
                    :to="{name: navItem.name}"
                    class="nav-item link">
         <span>{{ navItem.label }}</span>
