@@ -7,6 +7,8 @@ import './assets/tailwind.css'
 router.afterEach((to, from) => {
     nextTick(() => {
         // Handle title
+        if (to.name === 'CodeMonkeys') document.title = 'CodeMonkeys Docs';
+        else
         document.title = `${to.name} | CodeMonkeys`;
 
         // Handle anchor scrolling
