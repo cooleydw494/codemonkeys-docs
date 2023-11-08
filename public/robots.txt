@@ -1,4 +1,7 @@
 # robots.txt for a Vue app
 
 User-agent: *
+
 Allow: /
+
+SiteMap: https://codemonkeys.lol/sitemap.xml
