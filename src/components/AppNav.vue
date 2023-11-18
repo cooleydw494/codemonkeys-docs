@@ -39,12 +39,12 @@ export default {
       navItems: [
         {name: 'CodeMonkeys', label: 'CodeMonkeys'},
         {name: 'Get Started', label: 'Get Started'},
-        {name: 'Config', label: 'Config'},
         {name: 'Monk CLI', label: 'Monk CLI'},
         {name: 'Commands', label: 'Commands'},
+        {name: 'Config', label: 'Config'},
+        {name: 'Monkeys', label: 'Monkeys'},
         {name: 'Automations', label: 'Automations'},
         {name: 'Barrels', label: 'Barrels'},
-        {name: 'Monkeys', label: 'Monkeys'},
         {name: 'Funcs', label: 'Funcs'},
         {name: 'Contribution', label: 'Contribute'},
         {name: 'FAQ', label: 'FAQ'},
@@ -95,7 +95,7 @@ export default {
 
     &.desktop-nav {
       @apply w-full hidden md:inline-block px-2 py-3 ml-4 mt-12;
-      @apply rounded drop-shadow-xl shadow-inner;
+      @apply text-sm rounded drop-shadow-xl shadow-inner;
     }
   }
 

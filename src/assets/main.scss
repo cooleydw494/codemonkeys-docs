@@ -4,12 +4,12 @@
 @import "./tailwind.css";
 
 body {
-  font-family: 'darkmode-mono-on', 'sans-serif';
+  font-family: 'darkmode-mono-on', 'Lato', 'sans-serif';
 
-  @apply bg-surface-100 text-white text-sm font-normal;
+  @apply bg-surface-100 text-white text-base font-normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  word-spacing: -0.2rem;
+  word-spacing: -0.1rem;
   @apply scroll-smooth;
 
   h1, h2, h3, h4 {

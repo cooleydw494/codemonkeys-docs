@@ -1,7 +1,26 @@
 [toc]
-# Monkeys Advanced
+# Monkeys
 
-A deep dive into the more advanced aspects of Monkeys.
+A deep dive into the glorified config file that is the `Monkey` class.
+
+## 🐒 Monkey Basics
+Monkeys are your tool for specifying the exact behavior of your Automations. Your prompts, models, temperature, paths, and behavior specifications live here. The class-based approach unlocks advantages like inheritance, custom logic, and lifecycle hooks, but at heart the Monkey class maintains the simplicity of a config file.
+
+You can specify a Monkey when running an Automation using the `--monkey=<name>` CLI arg.
+
+```python
+from monkeys.monkey import Monkey
+from monkeys.docblock_monkey import DocblockMonkey
+
+# Load a specific Monkey directly
+m = DocblockMonkey()
+
+# Load any Monkey dynamically using your base Monkey class
+m = Monkey.load('my_monkey')
+
+# access properties easily
+main_prompt = m.MAIN_PROMPT
+```
 
 ## 🍹 Mixins
 
