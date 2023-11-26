@@ -5,7 +5,7 @@ A framework for automating GPT-powered tasks, from simple to complex.
 
 ## 🌐 Overview
 
-Welcome to the framework docs, where you can learn about concept and usage of CodeMonkeys. If you were looking for something else try these links:
+Welcome to the CodeMonkeys Framework Docs, where you can learn all about installing and using the framework. If you're looking for something else, check out the links below.
 
 - [CodeMonkeys Repo](https://github.com/cooleydw494/codemonkeys)
 - [Docs Repo](https://github.com/cooleydw494/codemonkeys-docs)
