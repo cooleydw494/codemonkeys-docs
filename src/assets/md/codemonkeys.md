@@ -11,15 +11,17 @@ Welcome to the CodeMonkeys Framework Docs, where you can learn all about install
 - [Docs Repo](https://github.com/cooleydw494/codemonkeys-docs)
 - [Sphinx Autodocs](https://cooleydw494.github.io/codemonkeys)
 
-CodeMonkeys gives devs control over their automated GPT logic. The current focus is working on codebases but it is lovingly designed to enable automations of all kinds. This framework aims to use AI effectively, while being reliable, predictable, and tailored to your needs. There is a strong focus on only involving AI at crucial areas of strength, and using good old-fashioned code for everything else.
-
-### Philosophy
-
-At the core of CodeMonkeys is a mission to create a framework that is accessible and simple to use, while being powerful and flexible enough to handle anything; to be as simple or as complex as the needs of the user. CodeMonkeys is inspired in spirit by Taylor Otwell's Laravel framework, which pushes the boundaries of how much a framework can love its users and vice versa. I want inexperienced devs to be nurtured, and experienced devs to be empowered.
+CodeMonkeys gives devs control over their automated GPT logic. The current focus is working on codebases and simple mass file transformation, but it is lovingly designed to enable automations of all kinds. This framework aims to use AI effectively, while being reliable, predictable, and tailored to your needs. There is a strong focus on only involving AI at crucial areas of strength, and using good old-fashioned code for everything else.
 
 ### 🚧 Alpha Status
 
-There will soon be a stable Alpha release focused on establishing the framework's architecture/concepts to a point of relative stability, and providing a flexible, immediately useful default Automation that is instructional in how it utilizes the framework.
+As of November 30th, I have released a stable Alpha focused on establishing the framework's architecture/concepts to a point of relative stability, and providing a flexible, immediately useful default Automation that is instructional in how it utilizes the framework.
+
+*These docs are still a work in progress, although I hope they're good enough to get anyone interested started. More updates coming soon! Updates almost every day.*
+
+### Philosophy
+
+At the core of CodeMonkeys is a mission to create a tool/framework that is accessible and simple to use, while being powerful and flexible enough to handle anything; to be as simple or as complex as the needs of the user. I want inexperienced devs to be nurtured, and experienced devs to be empowered.
 
 ### 📅 Medium-term Goals
 Some concerns have been set aside as I prepare for a stable Alpha release.
@@ -35,6 +37,7 @@ The next major focuses are:
   - focus on function calling support / Funcs
 - Improve git workflow, contribution docs/standards
 - Improve CLI output, custom Theming, accessibility
+- Much, MUCH more!
 
 ## 🎯 One-shot Prompts
 

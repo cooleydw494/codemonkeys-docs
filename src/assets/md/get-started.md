@@ -1,4 +1,5 @@
 [toc]
+
 # Get Started
 
 ## 🚀 Installation
@@ -19,6 +20,8 @@ monk-new [project_name]
 
 `cd` into your project and run `monk` or `monk help` to test your installation.
 
+If everything is working properly, you'll need to open the .env file that is generated and set your OPENAI_API_KEY.
+
 ## 📁 Structure
 
 CodeMonkeys' project structure aims to allow you to build/configure/run your automations in a simple, powerful way.
@@ -32,6 +35,7 @@ and built-in config management. Don't fight these paradigms unless you're prepar
 | `/automations`     | Automation instances, runnable via `monk -a <automation>`.                                   |
 | `/barrels`         | Custom or extended Barrel classes used to orchestrate multiple Automation/Monkeys.           |
 | `/monkeys`         | Custom or extended Monkey classes used to precisely configure Automation behavior.           |
+| `/mixins`          | Simple custom classes that are used to encapsulate repeatable Monkey props.                  |
 | `/builders`        | Custom or extended Builder classes for re-usable automation logic.                           |
 | `/funcs`           | Custom or extended Func classes for GPT function-calling.                                    |
 | `codemonkeys.defs` | A core module that dynamically exposes important PATHs for your project (ex: COMMANDS_PATH). |
