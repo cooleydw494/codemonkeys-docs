@@ -1,5 +1,9 @@
 # FAQ
 
+## These docs seem a bit incomplete?
+
+They are, and you have my deepest sympathies if you're struggling to understand something. I'm working on them every day, and now that I've pushed an Alpha release, I'll be focusing on them even more. The [Sphinx Docs](https://sphinx.codemonkeys.lol) may be helpful, but they focus solely on documenting classes/modules API-style.
+
 ## Is CodeMonkeys really a framework? It seems more like a tool.
 
 I've struggled with this question myself. I've gone back and forth on whether to call it a framework or a tool. I've settled on framework because it is designed to be extended and customized. It is also designed to be used in a variety of ways. I think it is a framework that can be used as a tool via configuration alone.
