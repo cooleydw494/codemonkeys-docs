@@ -16,8 +16,6 @@ entity type.
 - 🔷 Entity Type flags target non-Command entities (Commands are the default entity).
 - 🔷 Action flags perform alternate operations on targetable entities ('run' is the default action).
 
-## Monk CLI
-
 | Command                                | Description            | Note                   |
 |----------------------------------------|------------------------|------------------------|
 | `monk help`                            | Run this help script   |                        |
