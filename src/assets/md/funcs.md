@@ -60,3 +60,56 @@ class FinalizeOutput(Func):
 This is a more advanced strategy that I've used to great effect. It involves using a Func to transform the response from GPT into something more useful, or more in line with your expected formatting.
 
 This can mean writing Python code to transform the output in any way, and/or using the function description/parameters to coerce GPT into producing more specifically formatted output to begin with.
+
+## Create A New Func
+
+To generate a scaffolded Func, use the `monk make` framework command:
+
+```bash
+monk make func my_func
+```
+
+This will generate the class `MyFunc(Func)` in `funcs/my_func.py`, which can be imported and passed to the `GptClient@generate()` method for function calling.
+
+## Example Func
+
+```python
+from codemonkeys.entities.func import Func
+from codemonkeys.types import OInt
+
+
+class ExampleFunc(Func):
+    """
+    A class to represent a function to be called by a GPT model.
+
+    This class allows for defining a custom function that can be invoked by
+    the GPT model during text generation.
+    """
+
+    name: str = 'func_name'
+
+    _description: str = 'This function either adds arg1 to arg2 or returns arg1 if arg2 is not provided.'
+
+    # For more information on function calling parameters configuration options, see:
+    # https://platform.openai.com/docs/guides/gpt/function-calling
+    _parameters: dict = {
+        "type": "object",
+        "properties": {
+            "arg1": {
+                "type": "int",
+                "description": "Description for arg1",
+            },
+            "arg2": {
+                "type": "int",
+                "description": "Description for arg2",
+            },
+        },
+        "required": ["arg1"],
+    }
+
+    @classmethod
+    def _execute(cls, arg1: int, arg2: OInt) -> int:
+        if arg2 is None:
+            return arg1
+        return arg1 + arg2
+```
