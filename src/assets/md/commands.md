@@ -18,13 +18,13 @@ unnamed_arg_keys: list = []
 required_arg_keys: list = []
 ```
 
-#### named_arg_keys
+### named_arg_keys
 `named_arg_keys` is a list of the named arg names that are expected to be passed to the CLI command. You must define a named arg for it to be handled correctly. Named arg keys must be passed with a leading `--` (ex: `--all`), but should be defined without the `--`. If a named arg is passed without a value, it will be set to `True`.
 
-#### unnamed_arg_keys
+### unnamed_arg_keys
 `unnamed_arg_keys` is a list of the unnamed arg names that are expected to be passed to the CLI command. You must define an unnamed arg for it to be handled correctly.
 
-#### required_arg_keys
+### required_arg_keys
 `required_arg_keys` is a list of the args that are required to be passed to the CLI command. Required args must also be defined in either `named_args` or `unnamed_args`. Any required args that are not passed will result in an error.
 
 In addition to this, you must define the args as variables on the subclass. For example, if you have a `named_arg_keys` of `['foo']`, you must define a `foo` variable on the subclass. If you typehint the variable, the CLI arg will be cast to that type.

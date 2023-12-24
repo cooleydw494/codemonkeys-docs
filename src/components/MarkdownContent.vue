@@ -60,12 +60,23 @@ export default {
       const md = new MarkdownIt()
           .use(prism, {
             highlightInlineCode: true,
-            plugins: ['toolbar', 'copy-to-clipboard'],
+            // plugins: ['toolbar', 'copy-to-clipboard'], // clipboard breaks on URL change, toolbar is a dependency
           })
           .use(markdownItAnchor, {permalink: false, slugify: this.customSlugify})
           .use(markdownItTocDoneRight, {format: this.formatToc, level: [2], slugify: this.customSlugify});
 
       this.parsedMarkdown = md.render(this.markdown);
+
+      this.$nextTick(() => {
+        const wrapEmoji = (text) => {
+          const reEmoji = /\p{RI}\p{RI}|\p{Emoji}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})?(\u{200D}\p{Emoji}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})?)+|\p{EPres}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})?|\p{Emoji}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})/gu;
+          return text.replace(reEmoji, '<span class="emoji" role="img" aria-hidden="true">$&</span>');
+        }
+
+        document.body.querySelectorAll('.md-content h2, .md-content h3, .md-content span, .md-content p').forEach(p => {
+          p.innerHTML = wrapEmoji(p.innerHTML);
+        });
+      });
     },
     formatToc(x, htmlencode) {
       return `<span>${htmlencode(x)}</span>`;
@@ -105,18 +116,29 @@ export default {
 
 .md-content {
   ul, ol {
-    @apply block pl-2 pr-6 py-2 mt-0 list-disc list-inside bg-surface-300 text-sm font-semibold;
-    @apply rounded drop-shadow shadow-inner;
+    @apply block pl-2 pr-6 py-2 mt-0 bg-surface-300 text-2xs md:text-xs.5 font-normal;
+    @apply rounded drop-shadow shadow-inner list-none;
 
     li {
-      @apply ml-2 md:ml-6 my-3.5 w-full;
+      @apply ml-2 md:ml-2 my-3.5 w-full;
+      @apply relative pl-4;
+
+      &::before {
+        @apply text-4xs opacity-80;
+        content: '🔵 ';
+        @apply absolute left-0 top-0.5 md:top-1.5;
+      }
 
       ul, ol {
-        @apply py-0 mt-0 bg-transparent drop-shadow-none shadow-none;
+        @apply pl-0 py-0 mt-0 bg-transparent drop-shadow-none shadow-none;
 
         li {
-          @apply ml-8 md:ml-12;
-          list-style: circle;
+          @apply md:ml-6;
+
+          &::before {
+            content: '🔹';
+            @apply top-1 text-3xs opacity-75;
+          }
 
           &:last-child {
             @apply mb-6;
@@ -132,10 +154,14 @@ export default {
 
     ul, ol {
       @apply inline-block w-full mt-4 pr-4 md:w-56 md:pl-0 md:mt-0 lg:absolute lg:-ml-4 2xl:mt-0;
-      @apply drop-shadow-xl shadow-inner;
+      @apply drop-shadow-xl shadow-inner text-xs md:text-sm;
 
       li {
-        @apply list-none p-0;
+        @apply list-none p-0 md:ml-6;
+        &::before {
+          @apply content-none;
+        }
+
 
         a {
           @apply w-full rounded-sm px-2 py-2 -mr-6 -my-2 md:px-4 md:-ml-4;
@@ -169,8 +195,8 @@ export default {
   }
 
   h1 { @apply lg:mt-0; }
-  h2 { @apply pb-4 mt-12 border-b-2 border-primary-300 border-opacity-20; }
-  h3 { @apply w-4/5 pb-2 mt-8 border-b-2 border-primary-600 border-opacity-5; }
+  h2 { @apply pb-2 mt-12 border-b-2 border-primary-300 border-opacity-20; }
+  h3 { @apply  pb-1 mt-10 border-b-2 border-primary-600 border-opacity-5; }
 
   div.code-toolbar > .toolbar {
     @apply opacity-100 mt-2 mr-4;
@@ -190,7 +216,7 @@ export default {
 
   table {
     @apply my-12 border-collapse overflow-x-scroll;
-    @apply rounded drop-shadow shadow-inner;
+    @apply w-full rounded drop-shadow shadow-inner;
 
     code { @apply bg-primary-400 bg-opacity-10; }
 
@@ -216,6 +242,10 @@ export default {
         }
       }
     }
+  }
+
+  .emoji {
+    @apply opacity-90;
   }
 }
 

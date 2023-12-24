@@ -6,7 +6,7 @@
 body {
   font-family: 'darkmode-mono-on', 'Lato', 'sans-serif';
 
-  @apply bg-surface-100 text-white text-base font-normal;
+  @apply bg-surface-100 text-xs md:text-xs.5 font-medium text-surface-900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-spacing: -0.1rem;
@@ -28,8 +28,7 @@ body {
   }
 
   h3 {
-    @apply text-sm font-medium;
-    @apply md:text-base;
+    @apply text-sm md:text-sm.5 font-bold;
   }
 
   h4 {
