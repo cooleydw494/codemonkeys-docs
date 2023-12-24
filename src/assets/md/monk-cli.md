@@ -16,16 +16,16 @@ entity type.
 - Entity Type flags target non-Command entities (Commands are the default entity).
 - Action flags perform alternate operations on targetable entities ('run' is the default action).
 
-| Command                                | Description                 | Note                   |
-|----------------------------------------|-----------------------------|------------------------|
-| [`monk help`](#help)                   | Run this help script        |                        |
-| [`monk list`](#list)                   | List existing entities      | `--all` (all entities) |
-| [`monk version`](#version)             | Print CodeMonkeys version   |                        |
-| [`monk <command>`](#command)           | Run a `Command`             | default action/entity  |
-| [`monk -a <automation>`](#automation)  | Run an `Automation `        | `--automation`         |
-| [`monk -b <barrel>`](#barrel)          | Run a `Barrel`              | `--barrel`             |
-| [`monk -e <entity>`](#entity)          | Open an entity in vim       | `--edit`               |
-| [`monk -h <command>`](#command-help)   | Help for a specific `Command` | `--help`               |
+| Command                               | Description                   | Note                   |
+|---------------------------------------|-------------------------------|------------------------|
+| [`monk help`](#help)                  | Run this help script          |                        |
+| [`monk list`](#list)                  | List existing entities        | `--all` (all entities) |
+| [`monk version`](#version)            | Print CodeMonkeys version     |                        |
+| [`monk <command>`](#command)          | Run a `Command`               | default action/entity  |
+| [`monk -a <automation>`](#automation) | Run an `Automation `          | `--automation`         |
+| [`monk -b <barrel>`](#barrel)         | Run a `Barrel`                | `--barrel`             |
+| [`monk -e <entity>`](#entity)         | Open an entity in vim         | `--edit`               |
+| [`monk -h <command>`](#command-help)  | Help for a specific `Command` | `--help`               |
 
 ## Command Details
 
