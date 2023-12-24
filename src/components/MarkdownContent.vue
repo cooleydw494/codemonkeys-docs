@@ -104,24 +104,23 @@ export default {
 <style lang="scss">
 
 .md-content {
-
   ul, ol {
     @apply block pl-2 pr-6 py-2 mt-0 list-disc list-inside bg-surface-300 text-sm font-semibold;
     @apply rounded drop-shadow shadow-inner;
 
     li {
       @apply ml-2 md:ml-6 my-3.5 w-full;
-    }
 
-    ul, ol {
-      @apply py-0 mt-0 bg-transparent drop-shadow-none shadow-none;
+      ul, ol {
+        @apply py-0 mt-0 bg-transparent drop-shadow-none shadow-none;
 
-      li {
-        @apply ml-8 md:ml-12;
-        list-style: circle;
+        li {
+          @apply ml-8 md:ml-12;
+          list-style: circle;
 
-        &:last-child {
-          @apply mb-6;
+          &:last-child {
+            @apply mb-6;
+          }
         }
       }
     }
@@ -132,17 +131,14 @@ export default {
     @apply lg:sticky lg:-ml-64 lg:top-0 lg:-mt-36 lg:pb-36;
 
     ul, ol {
-      @apply inline-block w-full lg:-ml-4;
-      @apply mt-4 pr-4;
-      @apply md:w-56 md:pl-0 md:mt-0;
-      @apply lg:absolute 2xl:mt-0;
+      @apply inline-block w-full mt-4 pr-4 md:w-56 md:pl-0 md:mt-0 lg:absolute lg:-ml-4 2xl:mt-0;
       @apply drop-shadow-xl shadow-inner;
 
       li {
         @apply list-none p-0;
 
         a {
-          @apply w-full rounded-sm px-2 md:px-4 py-2 -mr-6 md:-ml-4 -my-2;
+          @apply w-full rounded-sm px-2 py-2 -mr-6 -my-2 md:px-4 md:-ml-4;
 
           &.active-anchor {
             @apply text-white bg-surface-200 bg-opacity-75 transition-all duration-300 transform;
@@ -166,98 +162,57 @@ export default {
 
     em {
       @apply text-inline-code text-opacity-75;
+      &:first-child {
+        @apply block text-surface-700;
+      }
     }
-
-    em:first-child {
-      @apply block text-surface-700;
-    }
   }
 
-  h1 {
-    @apply lg:mt-0;
-  }
-
-  h2 {
-    @apply pb-4 mt-12 border-b-2 border-primary-300 border-opacity-20;
-  }
-
-  h3 {
-    @apply w-4/5 pb-2 mt-8 border-b-2 border-primary-600 border-opacity-5;
-  }
+  h1 { @apply lg:mt-0; }
+  h2 { @apply pb-4 mt-12 border-b-2 border-primary-300 border-opacity-20; }
+  h3 { @apply w-4/5 pb-2 mt-8 border-b-2 border-primary-600 border-opacity-5; }
 
   div.code-toolbar > .toolbar {
     @apply opacity-100 mt-2 mr-4;
-
-    button {
-      @apply py-1.5 px-2 rounded-sm text-xs shadow-none drop-shadow;
-    }
+    button { @apply py-1.5 px-2 rounded-sm text-xs shadow-none drop-shadow; }
   }
 
   code {
     @apply px-1 bg-surface-300 rounded-sm font-normal;
-    padding-top: .0725rem;
-    padding-bottom: .0725rem;
-    margin-top: -.0725rem;
-    margin-bottom: -.0725rem;
+    padding-top: .0725rem; padding-bottom: .0725rem;
+    margin-top: -.0725rem; margin-bottom: -.0725rem;
   }
 
   pre {
     @apply mt-4 mb-6 bg-surface-300 rounded-md;
-
-    code {
-      @apply  pl-0 bg-transparent;
-    }
-
+    code { @apply pl-0 bg-transparent; }
   }
 
   table {
     @apply my-12 border-collapse overflow-x-scroll;
     @apply rounded drop-shadow shadow-inner;
 
-    code {
-      @apply bg-primary-400 bg-opacity-10;
-    }
+    code { @apply bg-primary-400 bg-opacity-10; }
 
     thead {
       @apply bg-surface-100 bg-opacity-20 text-primary-300 rounded;
 
       tr:first-child {
-        th:first-child {
-          @apply rounded-l;
-        }
-
-        th:last-child {
-          @apply rounded-r;
-        }
-      }
-
-      th {
-        @apply font-bold text-left px-6 py-4 border border-opacity-20 border-primary-200;
+        th:first-child { @apply rounded-l; }
+        th:last-child { @apply rounded-r; }
+        th { @apply font-bold text-left px-6 py-4 border border-opacity-20 border-primary-200; }
       }
     }
 
     tbody {
       @apply rounded;
-
       tr {
         @apply bg-surface-300;
-
         td {
           @apply px-4 py-2 border border-primary-200 border-opacity-20 text-surface-800 font-normal;
-
-          code {
-            @apply bg-surface-200 bg-opacity-60;
-          }
-        }
-
-        &:last-child {
-          td:first-child {
-            @apply rounded-bl;
-          }
-
-          td:last-child {
-            @apply rounded-br;
-          }
+          code { @apply bg-surface-200 bg-opacity-60; }
+          &:first-child { @apply rounded-bl; }
+          &:last-child { @apply rounded-br; }
         }
       }
     }

@@ -79,17 +79,13 @@ export default {
     @apply z-50 md:relative;
 
     &.mobile-nav {
+      @apply absolute top-0 z-40 mt-8 overflow-y-scroll;
+      @apply md:hidden flex flex-col rounded text-lg;
       width: 95%;
-      @apply absolute top-0 z-40 mt-8 overflow-y-scroll shadow-inner drop-shadow-2xl;
-      @apply md:hidden flex flex-col rounded;
-      @apply text-lg;
 
       .nav-item {
         @apply rounded-b text-center py-4;
-
-        &:first-child {
-          @apply rounded-t-sm;
-        }
+        &:first-child { @apply rounded-t-sm; }
       }
     }
 
@@ -100,27 +96,13 @@ export default {
   }
 
   .nav-item {
-    @apply w-full;
-    @apply rounded-sm block px-4 py-2;
+    @apply w-full rounded-sm block px-4 py-2;
     @apply transition-all duration-300 transform;
-
-    &.router-link-active {
-      @apply text-white bg-surface-200 bg-opacity-75;
-    }
-
-    &:hover {
-      @apply text-white;
-    }
-
-    &:first-child {
-      @apply rounded-t;
-    }
-
-    &:last-child {
-      @apply rounded-b;
-    }
+    &.router-link-active { @apply text-white bg-surface-200 bg-opacity-75; }
+    &:hover { @apply text-white; }
+    &:first-child { @apply rounded-t; }
+    &:last-child { @apply rounded-b; }
   }
-
 }
 
 </style>
