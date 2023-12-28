@@ -5,7 +5,7 @@ CodeMonkeys' Funcs make it easy to ask GPT to execute custom functions in respon
 
 ## 🤖 Function Calling
 
-Function Calling is a GPT feature that allows you to call a function from within your prompt. This is useful because it means you can write a prompt and have the `GptClient` execute a function in response.
+Function Calling is a GPT feature that allows you to instruct GPT to send a response that can be used to call a custom function you've defined. This is useful in CodeMonkeys because it means you can write a prompt and have the `GptClient` execute a function in response. For example, there's a built-in `Func` that allows GPT to write a file (directory-bounded for safety).
 
 Instead of engineering prompts that try to get formulaic or precise responses from GPT that can be (unreliably) used to perform programmatic tasks, you can define the function that performs the task, pass information about the function and its parameters, and have GPT return a JSON response that can be used to directly call the function itself.
 
@@ -14,7 +14,7 @@ The result is a powerful and significantly more reliable way to utilize GPT for 
 ## 📘 The Func Class
 
 Function Calling isn't particularly complicated, but CodeMonkeys makes it even easier to leverage with the `Func` class.
-Funcs allows you to define simple subclasses that obfuscate a bit of the boilerplate involved in Function Calling.
+Funcs allows you to define simple subclasses that obfuscate much of the boilerplate involved in Function Calling.
 
 Writing a Func is about as simple as filling out a form with the details, and defining an `_execute()` method that will be called using the GPT response. We'll discuss using the Func with the GptClient later (it's easy).
 
