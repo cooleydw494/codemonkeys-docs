@@ -1,11 +1,11 @@
 [toc]
 
-# Monk CLI 🐵
+# 💻 Monk CLI
 
 CodeMonkeys' CLI tool is integral to usage of the framework. The `monk` command can be run anywhere in a CodeMonkeys
 project, and will always run in the context of the project root.
 
-## Basic Usage
+## 🧱 Monk Basics
 
 The Monk CLI primarily is used to run Automations, Barrels, and framework Commands. It also makes your own `commands`
 directory readily usable.
@@ -27,7 +27,7 @@ entity type.
 | [`monk -e <entity>`](#entity)         | Open an entity in vim         | `--edit`               |
 | [`monk -h <command>`](#command-help)  | Help for a specific `Command` | `--help`               |
 
-## Command Details
+## 📚 Command Details
 
 ### Help
 
@@ -59,7 +59,7 @@ monk version
 
 ```bash
 monk <command>
-````
+```
 
 Custom `Commands` from your `/commands` directory are automagically available to the Monk CLI.
 

@@ -1,39 +1,54 @@
-# Contribution
+[toc]
+# 🛠️ Contribution
 
-CodeMonkeys is an open-source project and contributions are welcome. Please read the following guidelines before contributing.
+We're thrilled that you're interested in contributing to the CodeMonkeys open-source project! Your involvement is crucial for the continuous growth and improvement of the framework.
 
-## How to contribute
+## 🔄 How to Contribute
 
-### 1. Fork this repository
+CodeMonkeys is more than just code; it's about building a community of innovative developers. Here's how you can be a part of it:
 
-### 2. Clone your forked repository
+### Getting Started
 
-```bash
-git clone
-```
-
-### 3. Create a new branch
+Fork and clone the [CodeMonkeys repository](https://github.com/cooleydw494/codemonkeys) to start:
 
 ```bash
-git checkout -b <branch-name>
+git clone <your-forked-repo-url>
+git checkout -b <new-feature-or-fix>
 ```
 
-### 4. Make your changes
-
-### 5. Commit your changes
+Make changes in your local repository and commit them:
 
 ```bash
-git commit -m "<commit-message>"
+git commit -m "Add <new-feature-or-fix-description>"
 ```
 
-### 6. Push your changes
+Push to your fork and submit a pull request against the main CodeMonkeys repository.
 
-```bash
-git push origin <branch-name>
-```
+### Contribution Ideas
 
-### 7. Create a pull request
+- **New Features:** Enhance the framework with new functionalities.
+- **Bug Fixes:** Identify and fix issues to improve stability.
+- **Documentation:** Help improve or expand our documentation.
+- **Testing:** Contribute to testing across different platforms and environments.
 
-## How to contribute to the docs
+### Best Practices
 
-Do the same thing but for the [docs repo](https://github.com/cooleydw494/codemonkeys-docs).
+- **Code Style:** Follow the established code style for consistency.
+- **Commit Messages:** Write clear, concise commit messages.
+- **Documentation:** Update or add documentation for new features or changes.
+
+### Review Process
+
+After you submit a pull request, it will be reviewed. Feedback or changes might be suggested. Keep an eye on your pull request for updates.
+
+## 📚 Contribute to the Docs
+
+Documentation is vital for user understanding and framework adoption. To contribute:
+
+1. Fork the [CodeMonkeys Docs repository](https://github.com/cooleydw494/codemonkeys-docs).
+2. Make your changes or additions.
+3. Submit a pull request.
+
+### Understanding the Docs codebase
+
+The CodeMonkeys Docs are a Vue app, using tailwind and SCSS for styling. All the content is written in Markdown, and content changes should **only** be made to the Markdown files in `src/assets/md`. The Markdown files are converted to HTML by markdown-it, and then rendered by Vue components. The Vue/SCSS/Tailwind code is open to changes, but please do not make changes to the Markdown at the same time, unless it is necessary for backward compatibility.

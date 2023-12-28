@@ -1,5 +1,5 @@
 [toc]
-# CodeMonkeys Framework
+# 🐒 CodeMonkeys Framework
 
 A framework for automating GPT-powered tasks, from simple to complex.
 
@@ -23,10 +23,10 @@ As of November 30th, I have released a stable Alpha focused on establishing the 
 
 At the core of CodeMonkeys is a mission to create a tool/framework that is accessible and simple to use, while being powerful and flexible enough to handle anything; to be as simple or as complex as the needs of the user. I want inexperienced devs to be nurtured, and experienced devs to be empowered.
 
-### 📅 Medium-term Goals
-Some concerns have been set aside as I prepare for a stable Alpha release.
+## 📅 Future Plans
 
-The next major focuses are:
+There are many things I want to do with CodeMonkeys now that the Alpha is out. The following is a public todo list. It is a non-exhaustive list of my primary goals. If you'd like to contribute, please check out [Contribution](/contribution) and/or reach out!
+
 - Test Coverage
 - More testing on Windows/Linux (Should Work ™️)
 - Streamlined fine-tuning support

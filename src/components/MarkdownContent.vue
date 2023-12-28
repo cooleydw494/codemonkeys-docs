@@ -154,7 +154,7 @@ export default {
 
     ul, ol {
       @apply inline-block w-full mt-4 pr-4 md:w-56 md:pl-0 md:mt-0 lg:absolute lg:-ml-4 2xl:mt-0;
-      @apply drop-shadow-xl shadow-inner text-xs md:text-sm;
+      @apply drop-shadow-xl shadow-inner text-xs;
 
       li {
         @apply list-none p-0 md:ml-6;
@@ -164,7 +164,7 @@ export default {
 
 
         a {
-          @apply w-full rounded-sm px-2 py-2 -mr-6 -my-2 md:px-4 md:-ml-4;
+          @apply w-full rounded-sm px-2 py-2 -mr-6 -my-2 md:px-2 md:-ml-4;
 
           &.active-anchor {
             @apply text-white bg-surface-200 bg-opacity-75 transition-all duration-300 transform;

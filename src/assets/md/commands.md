@@ -3,7 +3,7 @@
 
 CodeMonkeys is heavily CLI-oriented, and Commands are a core concept. There are basic framework Commands, like `monk list --all`, which will list all the _entities_ you have in your project, and you can easily create open-ended custom Commands.
 
-## ⌨️ CliRunnable
+## 📘 CliRunnable Class
 The `Command` class, as well as the other _entities_, are a subclass of `CliRunnable`.
 
 The `CliRunnable` class is a base class that provides a common interface "cli-runnable" _entities_. It includes a required `run()` method which is called when the _entity_ is run from the CLI.
@@ -29,7 +29,7 @@ required_arg_keys: list = []
 
 In addition to this, you must define the args as variables on the subclass. For example, if you have a `named_arg_keys` of `['foo']`, you must define a `foo` variable on the subclass. If you typehint the variable, the CLI arg will be cast to that type.
 
-## Example Command
+## 🧩 Example Command
 
 The following is the Example Command that is used for generating new user Commands by running `monk make command <name>`.
 
