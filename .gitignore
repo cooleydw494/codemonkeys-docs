@@ -2,6 +2,8 @@
 /node_modules
 /dist
 
+# tailwind default config (just there as a reference)
+tailwind-default.config.js
 
 # local env files
 .env.local
