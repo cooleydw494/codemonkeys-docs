@@ -84,7 +84,7 @@ export default {
     observeH2s() {
       const options = {
         root: this.$refs.mdContent.parentElement.parentElement,
-        threshold: 0  // Adjust this value based on your needs
+        threshold: 1  // Adjust this value based on your needs
       };
 
       this.observer = new IntersectionObserver((entries) => {
