@@ -141,7 +141,8 @@ export default {
 
 
         a {
-          @apply w-full rounded-sm px-2 py-2 -mr-6 -my-2 md:px-2 md:-ml-4;
+          @apply text-sm md:text-xs;
+          @apply w-full rounded-sm px-3.5 py-3.5 -mr-6 -my-2 md:px-2 md:py-2 md:-ml-4;
 
           &.active-anchor {
             @apply text-white bg-surface-200 bg-opacity-75 transition-all duration-300 transform;
