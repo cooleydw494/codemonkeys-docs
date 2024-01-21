@@ -29,54 +29,27 @@ export default {
       observer: null,
     };
   },
-  created() {
-    this.parseMarkdown();
-  },
-  mounted() {
-    this.observeH2s();
-  },
-  beforeDestroy() {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
-  },
+  created() { this.parseMarkdown(); },
+  mounted() { this.observeH2s(); },
+  beforeDestroy() { this.observer?.disconnect(); },
   watch: {
-    activeH2(newValue, oldValue) {
-      if (oldValue) {
-        const oldActiveElement = this.$refs.mdContent.querySelector(`.table-of-contents a[href="#${oldValue}"]`);
-        if (oldActiveElement) {
-          oldActiveElement.classList.remove('active-anchor');
-        }
+    activeH2(newAnchor, oldAnchor) {
+      if (oldAnchor) {
+        const oldActiveElement = this.$refs.mdContent.querySelector(`.table-of-contents a[href="#${oldAnchor}"]`);
+        oldActiveElement?.classList.remove('active-anchor');
       }
-
-      const newActiveElement = this.$refs.mdContent.querySelector(`.table-of-contents a[href="#${newValue}"]`);
-      if (newActiveElement) {
-        newActiveElement.classList.add('active-anchor');
-      }
+      const newActiveElement = this.$refs.mdContent.querySelector(`.table-of-contents a[href="#${newAnchor}"]`);
+      newActiveElement?.classList.add('active-anchor');
     }
   },
   methods: {
     parseMarkdown() {
       const md = new MarkdownIt()
-          .use(prism, {
-            highlightInlineCode: true,
-            // plugins: ['toolbar', 'copy-to-clipboard'], // clipboard breaks on URL change, toolbar is a dependency
-          })
+          .use(prism, { highlightInlineCode: true })
           .use(markdownItAnchor, {permalink: false, slugify: this.customSlugify})
           .use(markdownItTocDoneRight, {format: this.formatToc, level: [2], slugify: this.customSlugify});
-
       this.parsedMarkdown = md.render(this.markdown);
-
-      this.$nextTick(() => {
-        const wrapEmoji = (text) => {
-          const reEmoji = /\p{RI}\p{RI}|\p{Emoji}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})?(\u{200D}\p{Emoji}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})?)+|\p{EPres}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})?|\p{Emoji}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})/gu;
-          return text.replace(reEmoji, '<span class="emoji" role="img" aria-hidden="true">$&</span>');
-        }
-
-        document.body.querySelectorAll('.md-content h2, .md-content h3, .md-content span, .md-content p').forEach(p => {
-          p.innerHTML = wrapEmoji(p.innerHTML);
-        });
-      });
+      this.$nextTick(this.wrapEmojis);
     },
     formatToc(x, htmlencode) {
       return `<span>${htmlencode(x)}</span>`;
@@ -84,12 +57,11 @@ export default {
     observeH2s() {
       const options = {
         root: this.$refs.mdContent.parentElement.parentElement,
-        threshold: 1  // Adjust this value based on your needs
+        threshold: 1,
       };
 
       this.observer = new IntersectionObserver((entries) => {
         let visibleEntries = entries.filter(entry => entry.isIntersecting);
-
         // Assuming you want the first (top-most) visible h2
         if (visibleEntries.length) {
           this.activeH2 = visibleEntries[0].target.id;
@@ -101,13 +73,18 @@ export default {
         this.observer.observe(h2);
       });
     },
-    customSlugify(s) {
-      // Removing emojis and other non-text symbols
-      let stringWithoutEmojis = s.replace(/[\p{Emoji}]/gu, '');
-
-      // Transforming to a URL-friendly format
-      return encodeURIComponent(stringWithoutEmojis.trim().replace(/\s+/g, '-').toLowerCase());
-    }
+    customSlugify(string) {
+      // Remove emojis/symbols
+      let sanitizedString = string.replace(/[\p{Emoji}]/gu, '');
+      // Make anchor-friendly slug
+      return encodeURIComponent(sanitizedString.trim().replace(/\s+/g, '-').toLowerCase());
+    },
+    wrapEmojis() {
+      document.body.querySelectorAll('.md-content h2, .md-content h3, .md-content span, .md-content p').forEach(p => {
+        const reEmoji = /\p{RI}\p{RI}|\p{Emoji}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})?(\u{200D}\p{Emoji}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})?)+|\p{EPres}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})?|\p{Emoji}(\p{EMod}+|\u{FE0F}\u{20E3}?|[\u{E0020}-\u{E007E}]+\u{E007F})/gu;
+        p.innerHTML = p.innerHTML.replace(reEmoji, '<span class="emoji" role="img" aria-hidden="true">$&</span>');
+      });
+    },
   },
 }
 </script>
@@ -197,11 +174,6 @@ export default {
   h1 { @apply lg:mt-0; }
   h2 { @apply pb-2 mt-12 border-b-2 border-primary-300 border-opacity-20; }
   h3 { @apply  pb-1 mt-10 border-b-2 border-primary-600 border-opacity-5; }
-
-  div.code-toolbar > .toolbar {
-    @apply opacity-100 mt-2 mr-4;
-    button { @apply py-1.5 px-2 rounded-sm text-xs shadow-none drop-shadow; }
-  }
 
   code {
     @apply px-1 bg-surface-300 rounded-sm font-normal;
